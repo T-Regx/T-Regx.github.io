@@ -39,7 +39,7 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
             <link>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</link>
             <guid>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</guid>
             <pubDate>Sat, 03 Mar 2018 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p> <p>Here's a quick list:</p> <ul> <li>ReadMe.md is now more throughout</li> <li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li> <li>The library can now be required using <a href="https://getcomposer.org/">Composer</a></li> <li>CleanRegex supports <code>PHP 5.3</code></li> <li>Ha...</li></ul>]]></description>
+            <description><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p> <p>Here's a quick list:</p> <ul> <li>ReadMe.md is now more throughout</li> <li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li> <li>The library can now be required using <a href="https://getcomposer.org" target="_blank">Composer</a></li> <li>CleanRegex supports <code>PHP 5.3</code></li> <li>Ha...</li></ul>]]></description>
         </item>
         <item>
             <title><![CDATA[What's new, new, new!]]></title>
