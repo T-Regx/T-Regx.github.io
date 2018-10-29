@@ -1,0 +1,172 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Matched occurrence details · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="When using `pattern()-&gt;match()`, some methods receive a callback that accepts `Match` details object. These methods "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Matched occurrence details · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="When using `pattern()-&gt;match()`, some methods receive a callback that accepts `Match` details object. These methods "/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/installation" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Match Details</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul><li class="navListItem"><a class="navItem" href="/docs/overview">What&#x27;s T-Regx?</a></li><li class="navListItem"><a class="navItem" href="/docs/whats-the-point">Why would I use T-Regx?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Kick Start</h3><ul><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Matching</h3><ul><li class="navListItem"><a class="navItem" href="/docs/match">Match a subject</a></li><li class="navListItem"><a class="navItem" href="/docs/match-first">First occurrence</a></li><li class="navListItem"><a class="navItem" href="/docs/match-for-first">Optional matches</a></li><li class="navListItem"><a class="navItem" href="/docs/match-for-each">Iterate/For Each</a></li><li class="navListItem"><a class="navItem" href="/docs/match-offsets">Match offsets</a></li><li class="navListItem"><a class="navItem" href="/docs/match-map">Map occurrences</a></li><li class="navListItem"><a class="navItem" href="/docs/match-flat-map">Map with keys (Flat map)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Replacing</h3><ul><li class="navListItem"><a class="navItem" href="/docs/replace">Replacing a string</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-with">Replace with a constant value</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-callback">Replace with callback</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-match-details">Advanced replace details</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Match Details</h3><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/match-details">Matched occurrence details</a></li><li class="navListItem"><a class="navItem" href="/docs/match-groups">Capturing groups</a></li><li class="navListItem"><a class="navItem" href="/docs/match-group">Inline groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Misc</h3><ul><li class="navListItem"><a class="navItem" href="/docs/split">Split a string</a></li><li class="navListItem"><a class="navItem" href="/docs/count">Count occurrences</a></li><li class="navListItem"><a class="navItem" href="/docs/filter">Filter an array</a></li><li class="navListItem"><a class="navItem" href="/docs/valid">Validate a pattern</a></li><li class="navListItem"><a class="navItem" href="/docs/delimiters">Automatic delimiters</a></li><li class="navListItem"><a class="navItem" href="/docs/composite-pattern">Composite Pattern</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Matched occurrence details</h1></header><article><div><span><p>When using <code>pattern()-&gt;match()</code>, some methods receive a callback that accepts <code>Match</code> details object. These methods
+are: <code>first()</code>, <code>forFirst()</code>, <code>forEach()</code>/<code>iterate()</code>, <code>map()</code>, <code>flatMap()</code>.</p>
+<p>Using <code>Match</code> details you can:</p>
+<ul>
+<li>Get <a href="#matched-text">value of a matched occurrence</a>, as well as matched capturing groups - <code>text()</code></li>
+<li>Get the <a href="#ordinal-value-index">ordinal value</a> of a matched occurrence - <code>index()</code>.</li>
+<li>Get the <a href="#subject">subject</a>, against which the pattern was matched - <code>subject()</code>.</li>
+<li>Get the <a href="#offsets">offsets of matched values</a> inside the subject - character offsets (UTF-8 safe) and byte offsets.</li>
+<li>Get <a href="#other-occurrences">other matched occurrences</a> - <code>all()</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="matched-text"></a><a href="#matched-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Matched text</h2>
+<p>There are 5 similar ways to get the value of a matched occurrence:</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'[A-Z][a-z]+'</span>)-&gt;match(<span class="hljs-string">'I like Trains'</span>)-&gt;map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+
+    <span class="hljs-keyword">return</span> $match-&gt;text();      <span class="hljs-comment">// using text() method</span>
+    <span class="hljs-keyword">return</span> $match-&gt;group(<span class="hljs-number">0</span>);    <span class="hljs-comment">// group #0 is the whole match in all regexp engines</span>
+    <span class="hljs-keyword">return</span> (string) $match;     <span class="hljs-comment">// cast it to string</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"$match"</span>;            <span class="hljs-comment">// enclose it in double quotes</span>
+});
+</code></pre>
+<p>or you can just accept <code>string</code> in the callback signature.</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'[A-Z][a-z]+'</span>)-&gt;match(<span class="hljs-string">'I like Trains'</span>)-&gt;map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(string $match)</span> </span>{
+    <span class="hljs-keyword">return</span> $match;
+});
+</code></pre>
+<p>All of them are equal to each other.</p>
+<h2><a class="anchor" aria-hidden="true" id="ordinal-value-index"></a><a href="#ordinal-value-index" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ordinal value (index)</h2>
+<p><code>Match.index()</code> returns the ordinal number of a matched occurrence.</p>
+<p>In this example, we'll modify every second word:</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'\w+'</span>)-&gt;match(<span class="hljs-string">'I like Trains, but I also like bikes'</span>)-&gt;map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    <span class="hljs-keyword">if</span> ($match-&gt;index() % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> strtolower($match);
+    }
+    <span class="hljs-keyword">return</span> strtoupper($match);
+});
+</code></pre>
+<pre><code class="hljs css language-php">[<span class="hljs-string">'i'</span>, <span class="hljs-string">'LIKE'</span>, <span class="hljs-string">'trains'</span>, <span class="hljs-string">'BUT'</span>, <span class="hljs-string">'i'</span>, <span class="hljs-string">'ALSO'</span>, <span class="hljs-string">'like'</span>, <span class="hljs-string">'BIKES'</span>]
+</code></pre>
+<p>Results of <code>Match.index()</code> are always <strong>continuous integer</strong>  numbers, going from <code>0</code> to <code>1</code>, <code>2</code>, <code>3</code> etc.</p>
+<h2><a class="anchor" aria-hidden="true" id="subject"></a><a href="#subject" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Subject</h2>
+<p>To use a subject in your callback, use <code>Match.subject()</code>:</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'[A-Z][a-z]+'</span>)-&gt;match(<span class="hljs-string">'I like Trains'</span>)-&gt;map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    <span class="hljs-keyword">return</span> $match-&gt;subject();
+});
+</code></pre>
+<pre><code class="hljs css language-php"><span class="hljs-string">'I like Trains'</span>
+</code></pre>
+<p>or you can store it in a variable and use it in your closure.</p>
+<pre><code class="hljs css language-php">$subject = <span class="hljs-string">'I like Trains'</span>;
+
+pattern(<span class="hljs-string">'[A-Z][a-z]+'</span>)-&gt;match($subject)-&gt;map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> <span class="hljs-title">use</span> <span class="hljs-params">($subject)</span> </span>{
+    <span class="hljs-keyword">return</span> $subject;
+});
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="offsets"></a><a href="#offsets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Offsets</h2>
+<p><code>Match.offset()</code> returns offsets in characters, whereas <code>Match.byteOffset()</code> returns it in bytes.</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'here'</span>)-&gt;match(<span class="hljs-string">'Apples for 0.30€, here'</span>)-&gt;first(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    $characters = $match-&gt;offset();   <span class="hljs-comment">// 18</span>
+    $byes = $match-&gt;byteOffset();     <span class="hljs-comment">// 20</span>
+});
+</code></pre>
+<p>Here's what the numbers mean:</p>
+<pre><code class="hljs css language-text">Apples for 0.30€, here
+                  ↑
+                  offset()
+</code></pre>
+<pre><code class="hljs css language-text">A  p   p   l   e   s      f   o   r      0  .  3  0  €           ,     h   e   r   e
+65 112 112 108 101 115 32 102 111 114 32 48 46 51 48 226 130 172 44 32 104 101 114 101
+                                                                       ↑
+                                                                       byteOffset()
+</code></pre>
+<p>In other words, <code>offset()</code> treats bytes <code>[226, 130, 172]</code> as one multi-byte character: <code>€</code> - and counts them as one,
+whereas <code>byteOffset()</code> counts them as three.</p>
+<p>Use:</p>
+<ul>
+<li><code>offset()</code> with methods: <code>mb_substr()</code>, <code>mb_strpos()</code></li>
+<li><code>byteOffset()</code> with methods: <code>substr()</code>, <code>strpos()</code></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="other-occurrences"></a><a href="#other-occurrences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other occurrences</h2>
+<p><code>Match</code> has access to other matched occurrences:</p>
+<ul>
+<li><code>Match.all()</code> - for whole matches (like <code>Match.text()</code>)</li>
+<li><code>Match.group().all()</code> - for capturing groups (like <code>Match.group().text()</code>)</li>
+</ul>
+<p>Even if you use <code>first()</code> or <code>only(int)</code> methods, <code>Match.all()</code> always returns unlimited occurrences.</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'\w+'</span>)-&gt;match(<span class="hljs-string">'Apples are cool'</span>)-&gt;first(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    $text = $match-&gt;text();   <span class="hljs-comment">// 'Apples'</span>
+    <span class="hljs-keyword">return</span> $match-&gt;all();     <span class="hljs-comment">// ['Apples', 'are', 'cool']</span>
+});
+</code></pre>
+<pre><code class="hljs css language-php">[<span class="hljs-string">'Apples'</span>, <span class="hljs-string">'are'</span>, <span class="hljs-string">'cool'</span>]
+</code></pre>
+<p>Basically, mapping each occurrence's text is the same as <code>Match.all()</code>.</p>
+<pre><code class="hljs css language-php">$all      = pattern($p)-&gt;match($s)-&gt;all();
+
+$allFirst = pattern($p)-&gt;match($s)-&gt;first(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    <span class="hljs-keyword">return</span> $match-&gt;all();
+});
+
+$allMap   = pattern($p)-&gt;match($s)-&gt;map(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    <span class="hljs-keyword">return</span> $match-&gt;text();
+});
+</code></pre>
+<p>Arrays <code>$all</code>, <code>$allFirst</code> and  <code>$allMap</code> are equal.</p>
+<h2><a class="anchor" aria-hidden="true" id="groups"></a><a href="#groups" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Groups</h2>
+<p>Using <code>Match.group()</code> you can easily retrieve capturing groups. Same as with <code>Match</code>, to retrieve matched occurrence
+value you can use <code>text()</code> method or cast it to <code>string</code>.</p>
+<pre><code class="hljs css language-php">$p = <span class="hljs-string">'(?&lt;value&gt;\d+)(?&lt;unit&gt;cm|mm)'</span>;
+$s = <span class="hljs-string">'192mm and 168cm or 18mm and 12cm'</span>;
+
+pattern($p)-&gt;match($s)-&gt;first(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+    $text = $match-&gt;text();                            <span class="hljs-comment">// '192mm'</span>
+
+    $value = (string) $match-&gt;group(<span class="hljs-string">'value'</span>);          <span class="hljs-comment">// '192'</span>
+    $unit  =          $match-&gt;group(<span class="hljs-string">'unit'</span>)-&gt;text()    <span class="hljs-comment">// 'mm'</span>
+});
+</code></pre>
+<hr>
+<p>Read on to learn more about <a href="/docs/match-groups">Capturing groups</a>.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/replace-match-details"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/match-groups"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-24 16:44:31</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#matched-text">Matched text</a></li><li><a href="#ordinal-value-index">Ordinal value (index)</a></li><li><a href="#subject">Subject</a></li><li><a href="#offsets">Offsets</a></li><li><a href="#other-occurrences">Other occurrences</a></li><li><a href="#groups">Groups</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/en/installation">Getting Started</a><a href="/docs/en/match-for-first">Documentation</a><a href="/docs/en/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
+                indexName: 't-regx',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

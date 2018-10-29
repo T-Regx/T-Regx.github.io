@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>T-Regx Blog</title>
+        <link>https://t-regx.github.io/blog</link>
+        <description>The best place to stay up-to-date with the latest T-Regx news and events.</description>
+        <lastBuildDate>Mon, 24 Sep 2018 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>T-Regx Blog</title>
+            <url>https://t-regx.github.io/img/t.regx.borderless.png</url>
+            <link>https://t-regx.github.io/blog</link>
+        </image>
+        <copyright>Copyright © 2018 Daniel Wilkowski</copyright>
+        <item>
+            <title><![CDATA[Welcome T-Regx]]></title>
+            <link>https://t-regx.github.io/blog/2018/09/24/welcome-t-regx.html</link>
+            <guid>https://t-regx.github.io/blog/2018/09/24/welcome-t-regx.html</guid>
+            <pubDate>Mon, 24 Sep 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>The library changes its name! Now it's called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It's a combination of words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em>.</p> <p>Also, I've invested much more time into the development of <del>CleanRegex</del> T-Regx. Here are the results:</p> <ul> <li>Library ...</li></ul>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Capturing groups update]]></title>
+            <link>https://t-regx.github.io/blog/2018/09/01/groups.html</link>
+            <guid>https://t-regx.github.io/blog/2018/09/01/groups.html</guid>
+            <pubDate>Sat, 01 Sep 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>One update about groups, not to cause confusion. <code>$match-&gt;groups()</code> treats indexes a bit different than <code>$match-&gt;group(int)</code>.</p>
+<p>Anyone who worked with regular expressions knows, that group <code>0</code> is a whole match. I don't want to break
+that convention. That is why I assumed that they must be equal:</p>
+<pre><code class="hljs css language-php">$match-&gt;group(<span class="hljs-number">0</span>) === $match-&gt;text()
+</code></pre>
+<p>Having said that, I still want to distinguish a method which returns groups and the one that returns a whole match.
+So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole match at index <code>0</code>, while <code>$match-&gt;group()</code> does.</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Support for PHP 5.3]]></title>
+            <link>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</link>
+            <guid>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</guid>
+            <pubDate>Sat, 03 Mar 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p> <p>Here's a quick list:</p> <ul> <li>ReadMe.md is now more throughout</li> <li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li> <li>The library can now be required using <a href="https://getcomposer.org/">Composer</a></li> <li>CleanRegex supports <code>PHP 5.3</code></li> <li>Ha...</li></ul>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[What's new, new, new!]]></title>
+            <link>https://t-regx.github.io/blog/2017/12/30/delimiters-and-safe-regex.html</link>
+            <guid>https://t-regx.github.io/blog/2017/12/30/delimiters-and-safe-regex.html</guid>
+            <pubDate>Sat, 30 Dec 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Another quicky update what's going on with CleanRegex :)</p> <p>Most important of these two is that patterns used with CleanRegex no longer need delimiters :&gt; I'm pretty happy with it, I don't see any reason why developers should keep including those.</p> <p>Ho...</p>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Back on track!]]></title>
+            <link>https://t-regx.github.io/blog/2017/11/10/back-on-track.html</link>
+            <guid>https://t-regx.github.io/blog/2017/11/10/back-on-track.html</guid>
+            <pubDate>Fri, 10 Nov 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>I'm here just to give you guys, a quick update and sum up what's been going on.</p> <p>So, I'm pretty happy with how's the lib looking right now. :) There's a pretty throughout ReadMe.md there on <a href="https://github.com/T-Regx/T-Regx">CleanRegex</a> github, but I bet you I'll expand it with more exa...</p>]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Hello, World!]]></title>
+            <link>https://t-regx.github.io/blog/2017/05/20/hello-world.html</link>
+            <guid>https://t-regx.github.io/blog/2017/05/20/hello-world.html</guid>
+            <pubDate>Sat, 20 May 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Hello, there! I'm very pleased to inform you that I've just started working on an open source Regular Expressions library for PHP. :&gt; I'm really passionate about it and I hope we'll get along really nicely!</p> ]]></description>
+        </item>
+    </channel>
+</rss>

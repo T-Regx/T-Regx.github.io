@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>What&#x27;s new, new, new! · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Another quicky update what&#x27;s going on with CleanRegex :)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="What&#x27;s new, new, new! · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/blog/2017/12/30/delimiters-and-safe-regex"/><meta property="og:description" content="Another quicky update what&#x27;s going on with CleanRegex :)"/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/docs/installation" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>All Blog Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All Blog Posts</h3><ul><li class="navListItem"><a class="navItem" href="/blog/2018/09/24/welcome-t-regx">Welcome T-Regx</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/09/01/groups">Capturing groups update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/03/php-5.3-support">Support for PHP 5.3</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2017/12/30/delimiters-and-safe-regex">What&#x27;s new, new, new!</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/11/10/back-on-track">Back on track!</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/05/20/hello-world">Hello, World!</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2017/12/30/delimiters-and-safe-regex">What&#x27;s new, new, new!</a></h1><p class="post-meta">December 30, 2017</p><div class="authorBlock"><p class="post-authorName"><a href="http://twitter.com/ericnakagawa" target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a href="http://twitter.com/ericnakagawa" target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><div><span><p>Another quicky update what's going on with CleanRegex :)</p>
+<p>Most important of these two is that patterns used with CleanRegex no longer need delimiters :&gt; I'm pretty happy with it,
+I don't see any reason why developers should keep including those.</p>
+<p>How delimitering works? CleanRegex has a number of potential delimiters. Firstly, it checks whether a pattern is already
+delimitered and if it's not, it adds a potential delimiter - one that isn't used in a pattern. Then in adds the
+flags :) As simple as that.</p>
+<p>The second change is that I've separated the lib into <code>CleanRegex</code> and <code>SafeRegex</code>. The <code>SafeRegex</code> is an exact
+copy of all <code>preg_*()</code> methods (like <code>preg_match()</code>, <code>preg_replace()</code>). They're used like this:</p>
+<ul>
+<li><code>preg_match()</code> -&gt; <code>preg::match()</code></li>
+<li><code>preg_replace()</code> -&gt; <code>preg::replace()</code></li>
+</ul>
+<p>I didn't want to use namespaces (like <code>\SafeRegex\preg_match</code>) because that would
+mean the programmers reading the code would have to check the imported namespaces <strong>every time</strong> they look at the code. With double
+colon <code>::</code> it's obvious.</p>
+<p><code>preg::*()</code> methods analyse warnings, return types of methods and result of <code>preg_last_error()</code>, and if they find that
+the pattern or subject failed in some way, they throw an exception, instead of a warning or returning <code>null</code>.
+I want developers to stop worrying about what <strong>might</strong> cause a bug, when they use regular expressions, and just
+focus on the creative part. I want them to <em>feel</em>: &quot;This code <strong>has</strong> to work, it would throw an exception otherwise&quot;.</p>
+<p>And the <code>CleanRegex</code> is what it was - the API part, that's using <code>SafeRegex</code> never to care about warnings or returning
+<code>null</code>/<code>false</code>/<code>[]</code>/<code>''</code>.</p>
+<p>That's it for today! :)</p>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/en/installation">Getting Started</a><a href="/docs/en/match-for-first">Documentation</a><a href="/docs/en/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
+                indexName: 't-regx',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

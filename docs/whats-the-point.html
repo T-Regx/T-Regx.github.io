@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>What&#x27;s the point? · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Here is a few reasons why one might consider using T-Regx."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="What&#x27;s the point? · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="Here is a few reasons why one might consider using T-Regx."/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class="siteNavGroupActive"><a href="/docs/installation" target="_self">Docs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>About</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul><li class="navListItem"><a class="navItem" href="/docs/overview">What&#x27;s T-Regx?</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/whats-the-point">Why would I use T-Regx?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Kick Start</h3><ul><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Matching</h3><ul><li class="navListItem"><a class="navItem" href="/docs/match">Match a subject</a></li><li class="navListItem"><a class="navItem" href="/docs/match-first">First occurrence</a></li><li class="navListItem"><a class="navItem" href="/docs/match-for-first">Optional matches</a></li><li class="navListItem"><a class="navItem" href="/docs/match-for-each">Iterate/For Each</a></li><li class="navListItem"><a class="navItem" href="/docs/match-offsets">Match offsets</a></li><li class="navListItem"><a class="navItem" href="/docs/match-map">Map occurrences</a></li><li class="navListItem"><a class="navItem" href="/docs/match-flat-map">Map with keys (Flat map)</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Replacing</h3><ul><li class="navListItem"><a class="navItem" href="/docs/replace">Replacing a string</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-with">Replace with a constant value</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-callback">Replace with callback</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-match-details">Advanced replace details</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Match Details</h3><ul><li class="navListItem"><a class="navItem" href="/docs/match-details">Matched occurrence details</a></li><li class="navListItem"><a class="navItem" href="/docs/match-groups">Capturing groups</a></li><li class="navListItem"><a class="navItem" href="/docs/match-group">Inline groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Misc</h3><ul><li class="navListItem"><a class="navItem" href="/docs/split">Split a string</a></li><li class="navListItem"><a class="navItem" href="/docs/count">Count occurrences</a></li><li class="navListItem"><a class="navItem" href="/docs/filter">Filter an array</a></li><li class="navListItem"><a class="navItem" href="/docs/valid">Validate a pattern</a></li><li class="navListItem"><a class="navItem" href="/docs/delimiters">Automatic delimiters</a></li><li class="navListItem"><a class="navItem" href="/docs/composite-pattern">Composite Pattern</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">What&#x27;s the point?</h1></header><article><div><span><p>Here is a few reasons why one might consider using T-Regx.</p>
+<h2><a class="anchor" aria-hidden="true" id="about-php-regular-expressions"></a><a href="#about-php-regular-expressions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>About PHP regular expressions</h2>
+<p>PHP regular expressions API is far from perfect. Here's only a handful of what's wrong with it:</p>
+<h3><a class="anchor" aria-hidden="true" id="implicit"></a><a href="#implicit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implicit</h3>
+<p>You are probably a PHP developer. I would like to get <code>'Robert likes apples'</code>. Can you tell me which is the correct signature
+for this task?</p>
+<pre><code class="hljs css language-php">preg_replace(<span class="hljs-string">'/Bob/'</span>, <span class="hljs-string">'Robert'</span>, <span class="hljs-string">'Bob likes apples'</span>);
+<span class="hljs-comment">// or</span>
+preg_replace(<span class="hljs-string">'/Bob/'</span>, <span class="hljs-string">'Bob likes apples'</span>, <span class="hljs-string">'Robert'</span>);
+<span class="hljs-comment">// ??</span>
+</code></pre>
+<p>Another try. Let's say you'd like to limit replacements. But you remember that there's a reference parameter <code>&amp;$count</code>
+somewhere. Again, which is the correct signature?</p>
+<pre><code class="hljs css language-php">$limit = <span class="hljs-number">1</span>;
+
+preg_replace(?, ?, ?, $limit, $count);
+<span class="hljs-comment">// or</span>
+preg_replace(?, ?, ?, $count, $limit);
+<span class="hljs-comment">// ??</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="unintuitive"></a><a href="#unintuitive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unintuitive</h3>
+<p>Programming languages are <strong>tools</strong> created to solve problems. An experienced programmer <strong>should</strong> be able to look
+at the code and tell what it does. With PHP <code>preg_*</code> method it's just. not. possible.</p>
+<p>Someone who doesn't know PHP regular expressions, can probably ask himself:</p>
+<ul>
+<li><code>preg_replace('//', $r, $s)</code> - will this replace all occurrences? Or just one?</li>
+<li><code>preg_match('//', $subject)</code> - will <em>this</em> match the first occurrence? Or all?</li>
+<li><code>preg_match_all('//', $subject);</code> Ok, this will find all matches, so preg_match() only finds the first.</li>
+<li><code>preg_filter('//', $replacements, $subject)</code> - who needs <code>$replacements</code> in <code>filter</code> method?</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="what-s-more"></a><a href="#what-s-more" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What's more</h4>
+<ul>
+<li>Parameters:
+<ul>
+<li><p>Methods with 4 or 5 parameters (3 of which are optional).</p>
+<p>It means that, whoever looks at the code has to <strong>remember</strong> (or to look up) what those optional values are and in which order.</p></li>
+</ul></li>
+<li>Return types:
+<ul>
+<li>Array of arrays, which contain either a <code>string</code>, <code>null</code>, or an array of <code>null</code>s, <code>strings</code> and <code>int</code>s.</li>
+</ul></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="messy"></a><a href="#messy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Messy</h3>
+<ul>
+<li><code>PREG_CAPTURE_OFFSET</code> is a night mare! It changes return type from &quot;an array of arrays&quot; to &quot;an array of arrays of arrays&quot;.</li>
+<li><code>PREG_SET_ORDER</code> / <code>PREG_PATTERN_ORDER</code> change return values. It's either &quot;groups of matches&quot; or &quot;matches of groups&quot;,
+depending on the flag.</li>
+</ul>
+<p>The worst part? You find yourself looking at this code</p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">return</span> $match[<span class="hljs-number">1</span>][<span class="hljs-number">0</span>];
+</code></pre>
+<p>having no idea what. it. does. You have to see whether you're using <code>preg_match()</code> or <code>preg_match_all()</code> and
+whether any of <code>PREG_SET_ORDER</code>/<code>PREG_PATTERN_ORDER</code>/<code>PREG_CAPTURE_OFFSET</code> were used.</p>
+<h3><a class="anchor" aria-hidden="true" id="inconsistent"></a><a href="#inconsistent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Inconsistent</h3>
+<ul>
+<li><p>How do you get results and the count of the results?</p>
+<table>
+<thead>
+<tr><th>Value</th><th><code>preg_match()</code></th><th><code>preg_replace()</code></th></tr>
+</thead>
+<tbody>
+<tr><td>Count</td><td>Return type</td><td>Argument reference</td></tr>
+<tr><td>Values</td><td>Argument reference</td><td>Return type</td></tr>
+</tbody>
+</table>
+<pre><code class="hljs css language-php">$replaced = preg_replace($p, $r, $s, $count);
+$count    = preg_match($p, $s, $matched);
+</code></pre></li>
+<li><p>If you use <code>PREG_CAPTURE_OFFSET</code> and your subject isn't matched with the pattern; these are the results:</p>
+<table>
+<thead>
+<tr><th>Success</th><th><code>preg_match()</code></th><th><code>preg_match_all()</code></th></tr>
+</thead>
+<tbody>
+<tr><td><code>true</code></td><td><code>['match', 2]</code></td><td><code>['match', 2']</code></td></tr>
+<tr><td><code>false</code></td><td><code>''</code></td><td><code>[null, -1]</code></td></tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="deliberately-buggy"></a><a href="#deliberately-buggy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deliberately buggy</h3>
+<ul>
+<li><p><code>preg_match</code> and <code>preg_match_all</code> return either:</p>
+<ul>
+<li><code>(int) x</code> - a number of matches, if a match is found</li>
+<li><code>(int) 0</code> - if no matches are found</li>
+<li><code>(bool) false</code> - if an error occurred</li>
+</ul>
+<p>So if you do just this:</p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">if</span> (preg_match(<span class="hljs-string">'//'</span>, <span class="hljs-string">''</span>)) {
+</code></pre>
+<p>there's no way of knowing whether your pattern is incorrect or whether it's correct but your subject wasn't matched with your
+pattern. You need to <strong>remember</strong> to add an explicit <code>false</code> check each time you use it.</p></li>
+<li><p>All <code>preg_*</code> methods only return <code>false</code>/<code>null</code>/<code>[]</code> on error. You have to remember to call <code>preg_last_error()</code> to get
+some insight in the nature of your error. Of course it only returns <code>int</code>! So you have to look up that <code>4</code> is
+&quot;invalid utf8 sequence&quot; and <code>2</code> is &quot;backtrack limit exceeded&quot;.</p></li>
+<li><p><code>preg_filter()</code> for arrays returns <code>[]</code> if an error occurred; even though <code>[]</code> is the perfectly valid result for this method.
+For example, it could have filtered out all values or its input was an empty array right from the beginning.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="t-regx-to-the-rescue"></a><a href="#t-regx-to-the-rescue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>T-Regx to the rescue</h2>
+<p>That's why T-Regx happened. It addresses all of PHP regular expressions flaws.</p>
+<h3><a class="anchor" aria-hidden="true" id="it-s-descriptive"></a><a href="#it-s-descriptive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>It's descriptive</h3>
+<p>What about now? Is the task easier?</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'Bob'</span>)-&gt;replace(<span class="hljs-string">'Bob likes applees'</span>)-&gt;first()-&gt;with(<span class="hljs-string">'Robert'</span>);
+</code></pre>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'Bob'</span>)-&gt;replace(<span class="hljs-string">'Bob likes applees'</span>)-&gt;only($limit)-&gt;with(<span class="hljs-string">'Robert'</span>);
+</code></pre>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'Bob'</span>)-&gt;count(<span class="hljs-string">'Bob likes applees'</span>);
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="it-s-for-developers"></a><a href="#it-s-for-developers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>It's for developers</h3>
+<p>If you try to use an invalid regular expression in Java or JavaScript, you would probably get a <code>SyntaxError</code> exception
+and you'd be forced to handle it. Such things don't happen in PHP regular expressions. If any <code>preg_</code> method fails,
+it returns <code>false</code> (or sometimes <code>null</code>). You can always use <code>if</code>, if you remember about it, but...</p>
+<p>...unfortunately these methods return values - some of which are <code>0</code> - which makes this code completely unreliable!</p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">if</span> (preg_match(<span class="hljs-string">'//'</span>, $subject)) {
+</code></pre>
+<p>It doesn't matter whether it found nothing (<code>0</code>) or failed (<code>false</code>) - you would have no idea. You need to add an explicit check:</p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">if</span> (($count = preg_match(<span class="hljs-string">'//'</span>, $subject)) !== <span class="hljs-keyword">false</span>) {
+    <span class="hljs-keyword">if</span> ($count &gt; <span class="hljs-number">1</span>) {
+    
+    }
+}
+<span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// handle the error</span>
+}
+</code></pre>
+<p>T-Regx always throws an exception and never issues any warnings, errors or notices.</p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">try</span> {
+    <span class="hljs-keyword">return</span> pattern(<span class="hljs-string">'Foo'</span>)-&gt;match(<span class="hljs-string">'Bar'</span>)-&gt;all();
+}
+<span class="hljs-keyword">catch</span> (CleanRegexException $exception) {
+    <span class="hljs-comment">// handle the error</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="it-s-explicit"></a><a href="#it-s-explicit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>It's explicit</h3>
+<p>Poor design of PHP <code>preg_*</code> methods does not make them really descriptive. Someone who's not familiar with it will probably
+ask himself:</p>
+<ul>
+<li><code>preg_replace('//', $r, $s)</code> - will this replace all or just one occurrence?</li>
+<li><code>preg_match('//', $subject)</code> - will <em>this</em> match the first occurrence? Or all?</li>
+</ul>
+<p>However,</p>
+<p>looking at T-Regx code, everyone can immediately see author's intentions and will be able to recognize what
+the code <strong>exactly</strong> does, right away.</p>
+<pre><code class="hljs css language-php">pattern(<span class="hljs-string">'[A-Z]+'</span>)-&gt;match($subject)-&gt;all();
+<span class="hljs-comment">// or</span>
+pattern(<span class="hljs-string">'[A-Z]+'</span>)-&gt;replace($subject)-&gt;first()-&gt;with(<span class="hljs-string">'word'</span>);
+</code></pre>
+<p>Looking at this code is like reading a book.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/overview"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/installation"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-23 13:59:20</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#about-php-regular-expressions">About PHP regular expressions</a><ul class="toc-headings"><li><a href="#implicit">Implicit</a></li><li><a href="#unintuitive">Unintuitive</a></li><li><a href="#messy">Messy</a></li><li><a href="#inconsistent">Inconsistent</a></li><li><a href="#deliberately-buggy">Deliberately buggy</a></li></ul></li><li><a href="#t-regx-to-the-rescue">T-Regx to the rescue</a><ul class="toc-headings"><li><a href="#it-s-descriptive">It's descriptive</a></li><li><a href="#it-s-for-developers">It's for developers</a></li><li><a href="#it-s-explicit">It's explicit</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/en/installation">Getting Started</a><a href="/docs/en/match-for-first">Documentation</a><a href="/docs/en/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
+                indexName: 't-regx',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
