@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Matched occurrence details · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="When using `pattern()-&gt;match()`, some methods receive a callback that accepts `Match` details object. These methods "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Matched occurrence details · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="When using `pattern()-&gt;match()`, some methods receive a callback that accepts `Match` details object. These methods "/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Matched occurrence details · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;When using &lt;code&gt;pattern()-&amp;gt;match()&lt;/code&gt;, some methods receive a callback that accepts &lt;code&gt;Match&lt;/code&gt; details object. These methods&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Matched occurrence details · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="&lt;p&gt;When using &lt;code&gt;pattern()-&amp;gt;match()&lt;/code&gt;, some methods receive a callback that accepts &lt;code&gt;Match&lt;/code&gt; details object. These methods&lt;/p&gt;
+"/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
@@ -31,15 +33,20 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Matched occurrence details</h1></header><article><div><span><p>When using <code>pattern()-&gt;match()</code>, some methods receive a callback that accepts <code>Match</code> details object. These methods
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Matched occurrence details</h1></header><article><div><span><p>When using <code>pattern()-&gt;match()</code>, some methods receive a callback that accepts <code>Match</code> details object. These methods
 are: <code>first()</code>, <code>forFirst()</code>, <code>forEach()</code>/<code>iterate()</code>, <code>map()</code>, <code>flatMap()</code>.</p>
-<p>Using <code>Match</code> details you can:</p>
+<p>Using <code>Match</code> details, you gain access to:</p>
 <ul>
-<li>Get <a href="#matched-text">value of a matched occurrence</a>, as well as matched capturing groups - <code>text()</code></li>
-<li>Get the <a href="#ordinal-value-index">ordinal value</a> of a matched occurrence - <code>index()</code>.</li>
-<li>Get the <a href="#subject">subject</a>, against which the pattern was matched - <code>subject()</code>.</li>
-<li>Get the <a href="#offsets">offsets of matched values</a> inside the subject - character offsets (UTF-8 safe) and byte offsets.</li>
-<li>Get <a href="#other-occurrences">other matched occurrences</a> - <code>all()</code></li>
+<li><a href="#matched-text">value of a matched occurrence</a> - <code>text()</code></li>
+<li><a href="#ordinal-value-index">ordinal value</a> of a matched occurrence - <code>index()</code>.</li>
+<li><a href="#subject">subject</a> against which the pattern was matched - <code>subject()</code>.</li>
+<li><a href="#offsets">offsets of matched values</a> in the subject:
+<ul>
+<li>character offsets (UTF-8 safe)</li>
+<li>byte offsets.</li>
+</ul></li>
+<li><a href="#other-occurrences">other matched occurrences</a> - <code>all()</code></li>
+<li>details about capturing groups, in the next chapter: <a href="/docs/match-groups">Capturing groups</a>.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="matched-text"></a><a href="#matched-text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Matched text</h2>
 <p>There are 5 similar ways to get the value of a matched occurrence:</p>
@@ -102,8 +109,8 @@ pattern(<span class="hljs-string">'[A-Z][a-z]+'</span>)-&gt;match($subject)-&gt;
                                                                        ↑
                                                                        byteOffset()
 </code></pre>
-<p>In other words, <code>offset()</code> treats bytes <code>[226, 130, 172]</code> as one multi-byte character: <code>€</code> - and counts them as one,
-whereas <code>byteOffset()</code> counts them as three.</p>
+<p>In other words, <code>offset()</code> treats bytes <code>[226, 130, 172]</code> as one multi-byte character (euro sign <code>€</code>) and counts them as
+one; whereas <code>byteOffset()</code> counts them as three.</p>
 <p>Use:</p>
 <ul>
 <li><code>offset()</code> with methods: <code>mb_substr()</code>, <code>mb_strpos()</code></li>
@@ -129,7 +136,14 @@ whereas <code>byteOffset()</code> counts them as three.</p>
   [<span class="hljs-string">'match'</span> =&gt; <span class="hljs-string">'cool'</span>,   <span class="hljs-string">'all'</span> =&gt; [<span class="hljs-string">'Apples'</span>, <span class="hljs-string">'are'</span>, <span class="hljs-string">'cool'</span>]]
 ]
 </code></pre>
-<p>Basically, mapping each occurrence's text is the same as <code>Match.all()</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="identities"></a><a href="#identities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identities</h3>
+<p>A curious reader might notice that:</p>
+<ul>
+<li>calling <code>match()-&gt;all()</code></li>
+<li>calling <code>Match.all()</code> for <code>first()</code></li>
+<li>mapping <code>Match.text()</code></li>
+</ul>
+<p>are identical calls:</p>
 <pre><code class="hljs css language-php">$all      = pattern($p)-&gt;match($s)-&gt;all();
 
 $allFirst = pattern($p)-&gt;match($s)-&gt;first(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
@@ -156,7 +170,7 @@ pattern($p)-&gt;match($s)-&gt;first(<span class="hljs-function"><span class="hlj
 </code></pre>
 <hr>
 <p>Read on to learn more about <a href="/docs/match-groups">Capturing groups</a>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/replace-match-details"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/match-groups"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-29 20:24:23</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#matched-text">Matched text</a></li><li><a href="#ordinal-value-index">Ordinal value (index)</a></li><li><a href="#subject">Subject</a></li><li><a href="#offsets">Offsets</a></li><li><a href="#other-occurrences">Other occurrences</a></li><li><a href="#groups">Groups</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2018-11-12</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/replace-match-details"><span class="arrow-prev">← </span><span>Advanced replace details</span></a><a class="docs-next button" href="/docs/match-groups"><span>Capturing groups</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#matched-text">Matched text</a></li><li><a href="#ordinal-value-index">Ordinal value (index)</a></li><li><a href="#subject">Subject</a></li><li><a href="#offsets">Offsets</a></li><li><a href="#other-occurrences">Other occurrences</a><ul class="toc-headings"><li><a href="#identities">Identities</a></li></ul></li><li><a href="#groups">Groups</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

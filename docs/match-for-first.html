@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Optional matches · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="If you call [`first()`](/docs/match-first) on a subject that isn&#x27;t matched by a pattern - `SubjectNotMatchedException` is thrown. We discussed"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Optional matches · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="If you call [`first()`](/docs/match-first) on a subject that isn&#x27;t matched by a pattern - `SubjectNotMatchedException` is thrown. We discussed"/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Optional matches · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;If you call &lt;a href=&quot;/docs/match-first&quot;&gt;&lt;code&gt;first()&lt;/code&gt;&lt;/a&gt; on a subject that isn&#x27;t matched by a pattern - &lt;code&gt;SubjectNotMatchedException&lt;/code&gt; is thrown. We discussed&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Optional matches · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="&lt;p&gt;If you call &lt;a href=&quot;/docs/match-first&quot;&gt;&lt;code&gt;first()&lt;/code&gt;&lt;/a&gt; on a subject that isn&#x27;t matched by a pattern - &lt;code&gt;SubjectNotMatchedException&lt;/code&gt; is thrown. We discussed&lt;/p&gt;
+"/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
@@ -31,7 +33,7 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Optional matches</h1></header><article><div><span><p>If you call <a href="/docs/match-first"><code>first()</code></a> on a subject that isn't matched by a pattern - <code>SubjectNotMatchedException</code> is thrown. We discussed
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Optional matches</h1></header><article><div><span><p>If you call <a href="/docs/match-first"><code>first()</code></a> on a subject that isn't matched by a pattern - <code>SubjectNotMatchedException</code> is thrown. We discussed
 that in the previous chapter.</p>
 <p>But what if you <strong>expected</strong> the subject not to be matched? And how do you to react to it?</p>
 <h2><a class="anchor" aria-hidden="true" id="optional-matches-with-forfirst"></a><a href="#optional-matches-with-forfirst" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Optional matches with <code>forFirst()</code></h2>
@@ -66,13 +68,27 @@ $s <span class="hljs-comment">// 'Match is not found'</span>
         <span class="hljs-keyword">return</span> <span class="hljs-string">'Match is found!'</span>;
     })
     -&gt;orElse(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(NotMatched $notMatched)</span> </span>{ 
-        <span class="hljs-keyword">return</span> <span class="hljs-string">"I couldn't match subject "</span> . $notMatched-&gt;subject();
+        <span class="hljs-keyword">return</span> <span class="hljs-string">"I couldn't match subject: "</span> . $notMatched-&gt;subject();
     });
     
-$s <span class="hljs-comment">// "I couldn't match subject I'm a dog"</span>
+$s <span class="hljs-comment">// "I couldn't match subject: I'm a dog"</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="orthrow"></a><a href="#orthrow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>orThrow()</code></h3>
-<p>If a match is not found, it throws an exception using the provided exception class.</p>
+<p>If a match is not found, it throws <code>SubjectNotMatchedException</code> by default.</p>
+<pre><code class="hljs css language-php"><span class="hljs-keyword">try</span> 
+{
+    pattern(<span class="hljs-string">'[0-9]+'</span>)-&gt;match(<span class="hljs-string">"I'm a dog"</span>)
+        -&gt;forFirst(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(Match $match)</span> </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-string">'Match is found!'</span>;
+        })
+        -&gt;orThrow();
+}
+<span class="hljs-keyword">catch</span> (SubjectNotMatchedException $e) {
+    <span class="hljs-comment">// React to an unmatched subject</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="custom-exceptions-for-orthrow"></a><a href="#custom-exceptions-for-orthrow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom exceptions for <code>orThrow()</code></h3>
+<p>You can also supply your own exception class name.</p>
 <pre><code class="hljs css language-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyException</span> <span class="hljs-keyword">extends</span> \<span class="hljs-title">Exception</span> </span>{}
 
 <span class="hljs-keyword">try</span> 
@@ -89,8 +105,8 @@ $s <span class="hljs-comment">// "I couldn't match subject I'm a dog"</span>
 <p>Of course, your custom exception must meet certain requirements:</p>
 <ul>
 <li><p><strong>It has to be a class</strong></p>
-<p>Trying to instantiate interfaces would break our &quot;Explicity rule&quot;. The class must be concrete and explicit. Besides,
-in PHP you only can throw <code>Error</code> or <code>Exception</code> (classes).</p></li>
+<p>Trying to instantiate interfaces or abstract classes would break our <a href="whats-the-point#t-regx-to-the-rescue">&quot;Explicity rule&quot;</a>.
+The class must be concrete and explicit.</p></li>
 <li><p><strong>It has to implement <code>\Throwable</code></strong></p>
 <p>Obviously.</p></li>
 <li><p><strong>It must have a suitable constructor</strong></p>
@@ -102,8 +118,8 @@ in PHP you only can throw <code>Error</code> or <code>Exception</code> (classes)
 </ul></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="i-don-t-like-functional"></a><a href="#i-don-t-like-functional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>I don't like functional</h2>
-<p>If you don't like functional programming style, you are free to use <code>first()</code> (which throws an exception) and
-just catch it.</p>
+<p>If you don't like functional programming style, you are free to use <a href="/docs/match-first"><code>first()</code></a> (which throws an exception)
+and just catch it.</p>
 <pre><code class="hljs css language-php"><span class="hljs-keyword">try</span> {
     <span class="hljs-keyword">return</span> pattern(<span class="hljs-string">'[0-9]+'</span>)-&gt;match(<span class="hljs-string">"I'm a dog"</span>)-&gt;first();
 }
@@ -111,7 +127,7 @@ just catch it.</p>
     <span class="hljs-keyword">return</span> <span class="hljs-string">'Some other value'</span>;
 }
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/match-first"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/match-for-each"><span>Next</span><span class="arrow-next"> →</span></a></div><p style="font-size:12px;text-align:right"><strong>Last updated: </strong>2018-10-29 20:24:23</p></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#optional-matches-with-forfirst">Optional matches with <code>forFirst()</code></a><ul class="toc-headings"><li><a href="#orreturn"><code>orReturn()</code></a></li><li><a href="#orelse"><code>orElse()</code></a></li><li><a href="#orthrow"><code>orThrow()</code></a></li></ul></li><li><a href="#i-don-t-like-functional">I don't like functional</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2018-11-12</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/match-first"><span class="arrow-prev">← </span><span>First occurrence</span></a><a class="docs-next button" href="/docs/match-for-each"><span>Iterate/For Each</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#optional-matches-with-forfirst">Optional matches with <code>forFirst()</code></a><ul class="toc-headings"><li><a href="#orreturn"><code>orReturn()</code></a></li><li><a href="#orelse"><code>orElse()</code></a></li><li><a href="#orthrow"><code>orThrow()</code></a></li><li><a href="#custom-exceptions-for-orthrow">Custom exceptions for <code>orThrow()</code></a></li></ul></li><li><a href="#i-don-t-like-functional">I don't like functional</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section>Some image here<section class="copyright">Copyright © 2018 Daniel Wilkowski</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
