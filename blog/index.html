@@ -36,7 +36,7 @@ words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em
 <p>Also, I've invested much more time into the development of <del>CleanRegex</del> T-Regx. Here are the results:</p>
 <ul>
 <li>Library changed its name. :D</li>
-<li>Throwing different exceptions for:
+<li>PHP silences almost all of buggy situations, so T-Regx is now throwing different exceptions for:
 <ul>
 <li>Invalid pattern - <em>should never happen in prod</em></li>
 <li>Unmatched subject - should be handled by the developer</li>
@@ -45,6 +45,7 @@ words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em
 <li>Group index exceeding number of groups - <em>should never happen</em></li>
 <li>Negative group index - <em>should never happen</em></li>
 <li>Group that wasn't matched by subject - should be handled by the developer</li>
+<li>Capture a split delimiter, that's not inside a capturing group - <em>should never happen</em></li>
 </ul></li>
 <li><code>forFirst()</code> for matches, replacements and groups - useful in cases of &quot;should be handled by the developer&quot;</li>
 <li>PCRE returns offsets as bytes, always. T-Regx now returns these offsets as characters, using <code>mb_string</code> extension.
@@ -69,7 +70,7 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
 <ul>
 <li>ReadMe.md is now more throughout</li>
 <li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li>
-<li>The library can now be required using <a href="https://getcomposer.org" target="_blank">Composer</a></li>
+<li>The library can now be required using <a href="https://packagist.org/packages/rawr/t-regx" target="_blank">Composer</a></li>
 <li>CleanRegex supports <code>PHP 5.3</code></li>
 <li>Handling compile pattern exceptions and runtime pattern exceptions</li>
 <li>Passing callbacks with detailed object parameters (<code>Match</code> and <code>ReplaceMatch</code>).</li>
