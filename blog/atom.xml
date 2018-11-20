@@ -17,7 +17,6 @@
         <summary type="html"><![CDATA[<p>The library changes its name! Now it's called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It's a combination of words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em>.</p> <p>Also, I've invested much more time into the development of <del>CleanRegex</del> T-Regx. Here are the results:</p> <ul> <li>Library ...</li></ul>]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
     <entry>
@@ -36,7 +35,6 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
 ]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
     <entry>
@@ -48,7 +46,6 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
         <summary type="html"><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p> <p>Here's a quick list:</p> <ul> <li>ReadMe.md is now more throughout</li> <li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li> <li>The library can now be required using <a href="https://getcomposer.org" target="_blank">Composer</a></li> <li>CleanRegex supports <code>PHP 5.3</code></li> <li>Ha...</li></ul>]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
     <entry>
@@ -60,7 +57,6 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
         <summary type="html"><![CDATA[<p>Another quicky update what's going on with CleanRegex :)</p> <p>Most important of these two is that patterns used with CleanRegex no longer need delimiters :&gt; I'm pretty happy with it, I don't see any reason why developers should keep including those.</p> <p>Ho...</p>]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
     <entry>
@@ -72,7 +68,6 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
         <summary type="html"><![CDATA[<p>I'm here just to give you guys, a quick update and sum up what's been going on.</p> <p>So, I'm pretty happy with how's the lib looking right now. :) There's a pretty throughout ReadMe.md there on <a href="https://github.com/T-Regx/T-Regx">CleanRegex</a> github, but I bet you I'll expand it with more exa...</p>]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
-            <uri>http://twitter.com/ericnakagawa</uri>
         </author>
     </entry>
     <entry>
@@ -84,7 +79,6 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
         <summary type="html"><![CDATA[<p>Hello, there! I'm very pleased to inform you that I've just started working on an open source Regular Expressions library for PHP. :&gt; I'm really passionate about it and I hope we'll get along really nicely!</p> ]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
-            <uri>http://twitter.com/</uri>
         </author>
     </entry>
 </feed>
