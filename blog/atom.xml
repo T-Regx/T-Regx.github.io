@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://t-regx.github.io/blog</id>
     <title>T-Regx Blog</title>
-    <updated>2018-12-05T06:00:00Z</updated>
+    <updated>2018-12-06T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://t-regx.github.io/blog"/>
     <subtitle>The best place to stay up-to-date with the latest T-Regx news and events.</subtitle>
@@ -10,11 +10,11 @@
     <rights>Copyright © 2018 Daniel Wilkowski</rights>
     <entry>
         <title type="html"><![CDATA[Santa Clause Day Update]]></title>
-        <id>https://t-regx.github.io/blog/2018/12/05/santa-clause-update.html</id>
-        <link href="https://t-regx.github.io/blog/2018/12/05/santa-clause-update.html">
+        <id>https://t-regx.github.io/blog/2018/12/06/santa-clause-update.html</id>
+        <link href="https://t-regx.github.io/blog/2018/12/06/santa-clause-update.html">
         </link>
-        <updated>2018-12-05T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p><img src="/img/t.regx.santa.png" class="blog-img t-regx-santa" alt=""></p> <p>So over 2 months have passed since the last blog entry - much have changed. It's all described in <a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md">ChangeLog.md</a> on github, so there's no reason for rewriting it again.</p> <p>Except for that, there's a discussion section in <a href="/help">Help</a> - feel free to ask questions ...</p>]]></summary>
+        <updated>2018-12-06T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><img src="/img/t.regx.santa.png" class="blog-img t-regx-santa" alt=""></p> <p>So over 2 months have passed since the last blog entry - much have changed. It's all described in <a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md">ChangeLog.md</a> on github, so there's no reason for rewriting it again.</p> <p>One big change is <a href="/docs/pattern-building"><code>Pattern building</code></a> - which lets you handle user input or unsafe ch...</p>]]></summary>
         <author>
             <name>Daniel Wilkowski</name>
         </author>
