@@ -18,6 +18,7 @@
 <url> <loc>https://t-regx.github.io/docs/identities</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/identities" /> </url>
 <url> <loc>https://t-regx.github.io/docs/installation</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/installation" /> </url>
 <url> <loc>https://t-regx.github.io/docs/introduction</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/introduction" /> </url>
+<url> <loc>https://t-regx.github.io/docs/is-valid</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/is-valid" /> </url>
 <url> <loc>https://t-regx.github.io/docs/match-details</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/match-details" /> </url>
 <url> <loc>https://t-regx.github.io/docs/match-first</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/match-first" /> </url>
 <url> <loc>https://t-regx.github.io/docs/match-flat-map</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/match-flat-map" /> </url>
@@ -38,6 +39,5 @@
 <url> <loc>https://t-regx.github.io/docs/replace</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/replace" /> </url>
 <url> <loc>https://t-regx.github.io/docs/safe-regex</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/safe-regex" /> </url>
 <url> <loc>https://t-regx.github.io/docs/split</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/split" /> </url>
-<url> <loc>https://t-regx.github.io/docs/valid</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/valid" /> </url>
 <url> <loc>https://t-regx.github.io/docs/whats-the-point</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.github.io/docs/whats-the-point" /> </url>
 </urlset>
