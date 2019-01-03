@@ -55,7 +55,7 @@ preg_replace(?, ?, ?, $count, $limit);
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="unintuitive"></a><a href="#unintuitive" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unintuitive</h3>
 <p>Programming languages are <strong>tools</strong> created to solve problems. An experienced programmer <strong>should</strong> be able to look
-at the code and tell what it does. With PHP <code>preg_*</code> method it's just. not. possible.</p>
+at the code and tell what it does. With PHP <code>preg_*</code> functions it's just. not. possible.</p>
 <p>Someone who doesn't know PHP regular expressions, can probably ask himself:</p>
 <ul>
 <li><code>preg_replace('//', $r, $s)</code> - will this replace all occurrences? Or just one?</li>
@@ -67,7 +67,7 @@ at the code and tell what it does. With PHP <code>preg_*</code> method it's just
 <ul>
 <li>Parameters:
 <ul>
-<li><p>Methods with 4 or 5 parameters (3 of which are optional).</p>
+<li><p>Functions with 4 or 5 parameters (3 of which are optional).</p>
 <p>It means that, whoever looks at the code has to <strong>remember</strong> (or to look up) what those optional values are and in which order.</p></li>
 </ul></li>
 <li>Return types:
@@ -127,11 +127,11 @@ $count    = preg_match($p, $s, $matched);
 </code></pre>
 <p>there's no way of knowing whether your pattern is incorrect or whether it's correct but your subject isn't matched by
 your pattern. You need to <strong>remember</strong> to add an explicit <code>false</code> check each time you use it.</p></li>
-<li><p>All <code>preg_*</code> methods only return <code>false</code>/<code>null</code>/<code>[]</code> on error. You have to remember to call <code>preg_last_error()</code> to get
+<li><p>All <code>preg_*</code> functions only return <code>false</code>/<code>null</code>/<code>[]</code> on error. You have to remember to call <code>preg_last_error()</code> to get
 some insight in the nature of your error. Of course it only returns <code>int</code>! So you have to look up that <code>4</code> is
 &quot;invalid utf8 sequence&quot; and <code>2</code> is &quot;backtrack limit exceeded&quot;.</p></li>
 <li><p><code>preg_filter()</code> for arrays returns <code>[]</code> if an error occurred; even though <code>[]</code> is the perfectly valid result for this
-method. For example, it could have filtered out all values or its input was an empty array right from the beginning.</p></li>
+function. For example, it could have filtered out all values or its input was an empty array right from the beginning.</p></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="t-regx-to-the-rescue"></a><a href="#t-regx-to-the-rescue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>T-Regx to the rescue</h2>
 <p>That's why T-Regx happened. It addresses all of PHP regular expressions flaws:</p>
@@ -150,9 +150,9 @@ method. For example, it could have filtered out all values or its input was an e
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="it-s-for-developers-it-s-reliable"></a><a href="#it-s-for-developers-it-s-reliable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>It's for developers (it's reliable)</h3>
 <p>If you try to use an invalid regular expression in Java or JavaScript, you would probably get a <code>SyntaxError</code> exception
-and you'd be forced to handle it. Such things don't happen in PHP regular expressions. If any <code>preg_</code> method fails,
-it returns <code>false</code> (or sometimes <code>null</code>). You can always use <code>if</code>, if you remember about it, but...</p>
-<p>...unfortunately these methods return values - some of which are <code>0</code> - which makes this code completely unreliable!</p>
+and you'd be forced to handle it. Such things don't happen in PHP regular expressions. If any <code>preg_*()</code> function fails,
+it returns <code>false</code> (or sometimes <code>null</code> or an empty array). You can always use <code>if</code>, if you remember about it, but...</p>
+<p>...unfortunately these functions return values - some of which are <code>0</code> - which makes this code completely unreliable!</p>
 <pre><code class="hljs css language-php"><span class="hljs-keyword">if</span> (preg_match(<span class="hljs-string">'//'</span>, $subject)) {
 </code></pre>
 <p>It doesn't matter whether it found nothing (<code>0</code>) or failed (<code>false</code>) - you would have no idea. You need to add an explicit check:</p>
@@ -188,7 +188,7 @@ it returns <code>false</code> (or sometimes <code>null</code>). You can always u
 <p>They all extend <code>CleanRegexException</code> though.</p>
 <p>Further, furthermore, if you pass an invalid data type to any of the T-Regx methods, <code>\InvalidArgumentException</code> is thrown.</p>
 <h3><a class="anchor" aria-hidden="true" id="it-s-explicit"></a><a href="#it-s-explicit" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>It's explicit</h3>
-<p>Poor design of PHP <code>preg_*</code> methods does not make them really descriptive. Someone who's not familiar with it will probably
+<p>Poor design of PHP <code>preg_*</code> functions does not make them really descriptive. Someone who's not familiar with it will probably
 ask himself:</p>
 <ul>
 <li><code>preg_replace('//', $r, $s)</code> - will this replace all or just one occurrence?</li>
@@ -216,7 +216,7 @@ pattern(<span class="hljs-string">'[A-Z]+'</span>)-&gt;replace($subject)-&gt;fir
 });
 </code></pre>
 <p>Read more about <a href="/docs/match-details"><code>Match</code> details</a>.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2018-12-10</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/overview"><span class="arrow-prev">← </span><span>What&#x27;s T-Regx?</span></a><a class="docs-next button" href="/docs/installation"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-s-wrong-with-php-regular-expressions">What's wrong with PHP Regular Expressions:</a><ul class="toc-headings"><li><a href="#implicit">Implicit</a></li><li><a href="#unintuitive">Unintuitive</a></li><li><a href="#messy">Messy</a></li><li><a href="#inconsistent">Inconsistent</a></li><li><a href="#deliberately-buggy">Deliberately buggy</a></li></ul></li><li><a href="#t-regx-to-the-rescue">T-Regx to the rescue</a><ul class="toc-headings"><li><a href="#it-s-descriptive">It's descriptive</a></li><li><a href="#it-s-for-developers-it-s-reliable">It's for developers (it's reliable)</a></li><li><a href="#it-s-explicit">It's explicit</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2018 Daniel Wilkowski</section><section class="sitemap"><div><div>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-1-3</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/overview"><span class="arrow-prev">← </span><span>What&#x27;s T-Regx?</span></a><a class="docs-next button" href="/docs/installation"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-s-wrong-with-php-regular-expressions">What's wrong with PHP Regular Expressions:</a><ul class="toc-headings"><li><a href="#implicit">Implicit</a></li><li><a href="#unintuitive">Unintuitive</a></li><li><a href="#messy">Messy</a></li><li><a href="#inconsistent">Inconsistent</a></li><li><a href="#deliberately-buggy">Deliberately buggy</a></li></ul></li><li><a href="#t-regx-to-the-rescue">T-Regx to the rescue</a><ul class="toc-headings"><li><a href="#it-s-descriptive">It's descriptive</a></li><li><a href="#it-s-for-developers-it-s-reliable">It's for developers (it's reliable)</a></li><li><a href="#it-s-explicit">It's explicit</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap"><div><div>
 <script>
     (function () {
         if (window.DISQUS === undefined) {
