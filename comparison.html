@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang=""><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>T-Regx · Powerful Regular Expressions library</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Powerful Regular Expressions library"/><meta property="og:title" content="T-Regx · Powerful Regular Expressions library"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.github.io/index.html"/><meta property="og:description" content="Powerful Regular Expressions library"/><meta property="og:image" content="https://t-regx.github.io/img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.github.io/img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.github.io/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.github.io/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/></head><body><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="/docs/installation" target="_self">Docs</a></li><li class="siteNavItemActive"><a href="/comparison" target="_self">Compare</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer documentContainer postContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Comparison table of plain PHP and T-Regx</h1><div><span><p>Here's a little table of some of the differences between the behaviour of plain PHP <code>preg_*()</code> methods and T-Regx API.</p>
+</span></div></header><table class="comparison-table" width="100%" border="0" cellSpacing="0" cellPadding="0"><thead><tr><th></th><th>Plain PHP</th><th>T-Regx</th></tr><tr class="logo-row"><th></th><th><img src="img/comparison/php.png" alt="Plain PHP"/></th><th><img src="img/t.regx.png" alt="T-Regx"/></th></tr></thead><tbody><tr><td><div><span><p>Invalid pattern<sup>(eg. <code>/unclosed[A-/</code>)</sup></p>
+</span></div></td><td><div><span><p>Issues a warning</p>
+</span></div></td><td><div><span><p>throws <code>InvalidPatternException</code> with descriptive error message</p>
+</span></div></td></tr><tr><td><div><span><p>Corrupted subject<sup>(eg. malformed utf-8 sequence)</sup></p>
+</span></div></td><td><div><span><ul>
+<li>Different methods return different error values (<code>false</code>, <code>null</code> or <code>[]</code>)</li>
+<li><code>preg_last_error()</code> returns error code</li>
+</ul>
+</span></div></td><td><div><span><p>throws <code>RuntimeCleanRegexException</code> with descriptive error message</p>
+</span></div></td></tr><tr><td><div><span><p>Overly complex pattern<sup>(eg. containing <code>?R</code>)</sup></p>
+</span></div></td><td><div><span><ul>
+<li>No warning</li>
+<li><code>preg_last_error()</code> returns error code</li>
+</ul>
+</span></div></td><td><div><span><p>throws <code>RuntimeSafeRegexException</code> with descriptive error message</p>
+</span></div></td></tr><tr><td><div><span><p>Using invalid capturing group name<sup>(eg. name <code>!@#$</code>, index <code>-2</code>)</sup></p>
+</span></div></td><td><div><span><p>Actually tries to get the group</p>
+</span></div></td><td><div><span><p>throws <code>InvalidArgumentException</code> with descriptive message</p>
+</span></div></td></tr><tr><td><div><span><p>Using a nonexistent group<sup>(one that was not used in the pattern)</sup></p>
+</span></div></td><td><div><span><p>Actually tries to get the group</p>
+</span></div></td><td><div><span><p>throws <code>NonexistentGroupException</code> with descriptive message</p>
+</span></div></td></tr><tr><td><div><span><p>Offsets in UTF-8<sup>(eg. 18€)</sup></p>
+</span></div></td><td><div><span><p>In bytes<sup>5 bytes</sup></p>
+</span></div></td><td><div><span><p>In characters<sup>3 characters</sup></p>
+</span></div></td></tr><tr><td><div><span><p>Worst case complexity</p>
+</span></div></td><td><div><span><p>array of arrays of arrays of string/null and integer<sup>preg_match_all() with PREG_OFFSET_CAPTURE</sup></p>
+</span></div></td><td><div><span><p>array of strings<sup>All matches or all groups</sup></p>
+</span></div></td></tr></tbody></table><div><div>
+<script>
+    (function () {
+       if (typeof window.disqus_shortname !== 'undefined') {
+            return;
+        }
+        window.disqus_shortname = 't-regx';
+        window.disqus_identifier = '7eb37bee54d5e7315fd19ebdc4c56cf7';
+        window.disqus_title = 'Questions about T-Regx Comparison';
+        window.disqus_url = 'http://t-regx.com/comparison';
+        if (window.DISQUS === undefined) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://t-regx.disqus.com/embed.js';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        } else {
+            window.DISQUS.reset({reload: true});
+        }
+    })();
+</script></div><div id="disqus_thread"></div></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap"><div><div>
+<script>
+    (function () {
+       if (typeof window.disqus_shortname !== 'undefined') {
+            return;
+        }
+        window.disqus_shortname = 't-regx';
+        window.disqus_identifier = '46dff8e37535ddb3571510672d1af48683bad013';
+        window.disqus_title = 'Questions about T-Regx';
+        window.disqus_url = 'http://localhost:3000/help';
+        if (window.DISQUS === undefined) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://t-regx.disqus.com/embed.js';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        } else {
+            window.DISQUS.reset({reload: true});
+        }
+    })();
+</script></div><div id="disqus_thread"></div></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
+                indexName: 't-regx',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

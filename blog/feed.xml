@@ -25,20 +25,18 @@
             <link>https://t-regx.github.io/blog/2018/09/24/welcome-t-regx.html</link>
             <guid>https://t-regx.github.io/blog/2018/09/24/welcome-t-regx.html</guid>
             <pubDate>Mon, 24 Sep 2018 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>The library changes its name! Now it's called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It's a combination of words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em>.</p> <p>Also, I've invested much more time into the development of <del>CleanRegex</del> T-Regx. Here are the results:</p> <ul> <li>Library ...</li></ul>]]></description>
+            <description><![CDATA[<p>The library changes its name! Now it's called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It's a combination of
+words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em>.</p>
+<p>Also, I've invested much more time into the development of <del>CleanRegex</del> T-Regx. Read on, for a detailed list of features.</p>
+]]></description>
         </item>
         <item>
             <title><![CDATA[Capturing groups update]]></title>
             <link>https://t-regx.github.io/blog/2018/09/01/groups.html</link>
             <guid>https://t-regx.github.io/blog/2018/09/01/groups.html</guid>
             <pubDate>Sat, 01 Sep 2018 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>One update about groups, not to cause confusion. <code>$match-&gt;groups()</code> treats indexes a bit different than <code>$match-&gt;group(int)</code>.</p>
-<p>Anyone who worked with regular expressions knows, that group <code>0</code> is a whole match. I don't want to break
-that convention. That is why I assumed that they must be equal:</p>
-<pre><code class="hljs css language-php">$match-&gt;group(<span class="hljs-number">0</span>) === $match-&gt;text()
-</code></pre>
-<p>Having said that, I still want to distinguish a method which returns groups and the one that returns a whole match.
-So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole match at index <code>0</code>, while <code>$match-&gt;group()</code> does.</p>
+            <description><![CDATA[<p>One update about groups, not to cause confusion. <code>$match-&gt;groups()</code> treats indexes a bit different than <code>$match-&gt;group(int)</code>.
+Read on to learn more :)</p>
 ]]></description>
         </item>
         <item>
@@ -46,14 +44,45 @@ So <code>$match-&gt;groups()</code> <strong>doesn't</strong> return the whole ma
             <link>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</link>
             <guid>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</guid>
             <pubDate>Sat, 03 Mar 2018 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p> <p>Here's a quick list:</p> <ul> <li>ReadMe.md is now more throughout</li> <li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li> <li>The library can now be required using <a href="https://packagist.org/packages/rawr/t-regx" target="_blank">Composer</a></li> <li>CleanRegex supports <code>PHP 5.3</code></li> <li>Ha...</li></ul>]]></description>
+            <description><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p>
+<p>Here's a quick list:</p>
+<ul>
+<li>ReadMe.md is now more throughout</li>
+<li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li>
+<li>The library can now be required using <a href="https://packagist.org/packages/rawr/t-regx" target="_blank">Composer</a></li>
+<li>CleanRegex supports <code>PHP 5.3</code></li>
+<li>Handling compile pattern exceptions and runtime pattern exceptions</li>
+<li>Passing callbacks with detailed object parameters (<code>Match</code> and <code>ReplaceMatch</code>).</li>
+<li>Add a facade <code>Pattern::of()</code></li>
+</ul>
+<p>In addition, I'd like to give a quick thanks to Bartek - my friend currently working at Thulium - for a nice suggestion :)</p>
+]]></description>
+        </item>
+        <item>
+            <title><![CDATA[What's new, new, new! Part 2]]></title>
+            <link>https://t-regx.github.io/blog/2017/12/30/safe-regex.html</link>
+            <guid>https://t-regx.github.io/blog/2017/12/30/safe-regex.html</guid>
+            <pubDate>Sat, 30 Dec 2017 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>I've separated the library into <code>CleanRegex</code> and <code>SafeRegex</code>. The <code>SafeRegex</code> is an exact copy of all <code>preg_*()</code> methods
+(like <code>preg_match()</code>, <code>preg_replace()</code>). They're used like this:</p>
+<ul>
+<li><code>preg_match()</code> -&gt; <code>preg::match()</code></li>
+<li><code>preg_replace()</code> -&gt; <code>preg::replace()</code></li>
+</ul>
+<p>I didn't want to use namespaces (like <code>\SafeRegex\preg_match</code>) because that would
+mean the programmers reading the code would have to check the imported namespaces <strong>every time</strong> they look at the code.
+With double colon <code>::</code> it's obvious. Read on, for more details.</p>
+]]></description>
         </item>
         <item>
             <title><![CDATA[What's new, new, new!]]></title>
-            <link>https://t-regx.github.io/blog/2017/12/30/delimiters-and-safe-regex.html</link>
-            <guid>https://t-regx.github.io/blog/2017/12/30/delimiters-and-safe-regex.html</guid>
+            <link>https://t-regx.github.io/blog/2017/12/30/delimiters.html</link>
+            <guid>https://t-regx.github.io/blog/2017/12/30/delimiters.html</guid>
             <pubDate>Sat, 30 Dec 2017 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>Another quicky update what's going on with CleanRegex :)</p> <p>Most important of these two is that patterns used with CleanRegex no longer need delimiters :&gt; I'm pretty happy with it, I don't see any reason why developers should keep including those.</p> <p>Ho...</p>]]></description>
+            <description><![CDATA[<p>Another quicky update what's going on with CleanRegex :)</p>
+<p>Most important of these two is that patterns used with CleanRegex no longer need delimiters :&gt; I'm pretty happy with it,
+I don't see any reason why developers should keep including those.</p>
+]]></description>
         </item>
         <item>
             <title><![CDATA[Back on track!]]></title>
