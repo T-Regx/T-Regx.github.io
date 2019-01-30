@@ -26,6 +26,7 @@
   footer {
     margin-top: 50px;
   }
+
   .fixedHeaderContainer {
     background-color: white;
     color: #26768c;
@@ -34,12 +35,29 @@
       color: #26768c;
     }
 
-    .navigationSlider nav.slidingNav ul li a {
-      color: #26768c;
+    .navigationSlider .slidingNav ul {
+      li {
+        a {
+          background-color: white;
+          color: #26768c;
 
-      &:hover {
-        background-color: white;
-        text-decoration: underline;
+          &:hover {
+            background-color: white;
+            text-decoration: underline;
+          }
+        }
+
+        &.siteNavItemActive {
+          a {
+            background-color: #68b5c7;
+            color: white;
+            border-radius: 12px;
+          }
+        }
+
+        &.navSearchWrapper {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -52,6 +70,6 @@
 }
 
 footer.nav-footer {
-  background: url("/img/footer.background.png");
+  background: url("/img/footer.background.png") fixed;
   background-size: cover;
 }
