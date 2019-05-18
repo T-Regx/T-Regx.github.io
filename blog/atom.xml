@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://t-regx.github.io/blog</id>
+    <id>https://t-regx.com/blog</id>
     <title>T-Regx Blog</title>
     <updated>2018-12-06T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
-    <link rel="alternate" href="https://t-regx.github.io/blog"/>
+    <link rel="alternate" href="https://t-regx.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest T-Regx news and events.</subtitle>
-    <logo>https://t-regx.github.io/img/t.regx.borderless.png</logo>
+    <logo>https://t-regx.com/img/t.regx.borderless.png</logo>
     <rights>Copyright © 2017-2019 Daniel Wilkowski</rights>
     <entry>
         <title type="html"><![CDATA[Santa Clause Day Update]]></title>
-        <id>https://t-regx.github.io/blog/2018/12/06/santa-clause-update.html</id>
-        <link href="https://t-regx.github.io/blog/2018/12/06/santa-clause-update.html">
+        <id>https://t-regx.com/blog/2018/12/06/santa-clause-update.html</id>
+        <link href="https://t-regx.com/blog/2018/12/06/santa-clause-update.html">
         </link>
         <updated>2018-12-06T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p><img src="/img/t.regx.santa.png" class="blog-img t-regx-santa" alt=""></p> <p>So over 2 months have passed since the last blog entry - much have changed. It's all described in <a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md">ChangeLog.md</a> on github, so there's no reason for rewriting it again.</p> <p>One big change is <a href="/docs/prepared-patterns"><code>Prepared Patterns</code></a> - which lets you handle user input or unsafe c...</p>]]></summary>
@@ -21,8 +21,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome T-Regx]]></title>
-        <id>https://t-regx.github.io/blog/2018/09/24/welcome-t-regx.html</id>
-        <link href="https://t-regx.github.io/blog/2018/09/24/welcome-t-regx.html">
+        <id>https://t-regx.com/blog/2018/09/24/welcome-t-regx.html</id>
+        <link href="https://t-regx.com/blog/2018/09/24/welcome-t-regx.html">
         </link>
         <updated>2018-09-24T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>The library changes its name! Now it's called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It's a combination of
@@ -35,8 +35,8 @@ words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em
     </entry>
     <entry>
         <title type="html"><![CDATA[Capturing groups update]]></title>
-        <id>https://t-regx.github.io/blog/2018/09/01/groups.html</id>
-        <link href="https://t-regx.github.io/blog/2018/09/01/groups.html">
+        <id>https://t-regx.com/blog/2018/09/01/groups.html</id>
+        <link href="https://t-regx.com/blog/2018/09/01/groups.html">
         </link>
         <updated>2018-09-01T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>One update about groups, not to cause confusion. <code>$match-&gt;groups()</code> treats indexes a bit different than <code>$match-&gt;group(int)</code>.
@@ -48,8 +48,8 @@ Read on to learn more :)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Support for PHP 5.3]]></title>
-        <id>https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html</id>
-        <link href="https://t-regx.github.io/blog/2018/03/03/php-5.3-support.html">
+        <id>https://t-regx.com/blog/2018/03/03/php-5.3-support.html</id>
+        <link href="https://t-regx.com/blog/2018/03/03/php-5.3-support.html">
         </link>
         <updated>2018-03-03T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Hello there! Another update, this time there's more to it - much has changed.</p>
@@ -71,8 +71,8 @@ Read on to learn more :)</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[What's new, new, new! Part 2]]></title>
-        <id>https://t-regx.github.io/blog/2017/12/30/safe-regex.html</id>
-        <link href="https://t-regx.github.io/blog/2017/12/30/safe-regex.html">
+        <id>https://t-regx.com/blog/2017/12/30/safe-regex.html</id>
+        <link href="https://t-regx.com/blog/2017/12/30/safe-regex.html">
         </link>
         <updated>2017-12-30T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>I've separated the library into <code>CleanRegex</code> and <code>SafeRegex</code>. The <code>SafeRegex</code> is an exact copy of all <code>preg_*()</code> methods
@@ -91,8 +91,8 @@ With double colon <code>::</code> it's obvious. Read on, for more details.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[What's new, new, new!]]></title>
-        <id>https://t-regx.github.io/blog/2017/12/30/delimiters.html</id>
-        <link href="https://t-regx.github.io/blog/2017/12/30/delimiters.html">
+        <id>https://t-regx.com/blog/2017/12/30/delimiters.html</id>
+        <link href="https://t-regx.com/blog/2017/12/30/delimiters.html">
         </link>
         <updated>2017-12-30T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Another quicky update what's going on with CleanRegex :)</p>
@@ -105,8 +105,8 @@ I don't see any reason why developers should keep including those.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Back on track!]]></title>
-        <id>https://t-regx.github.io/blog/2017/11/10/back-on-track.html</id>
-        <link href="https://t-regx.github.io/blog/2017/11/10/back-on-track.html">
+        <id>https://t-regx.com/blog/2017/11/10/back-on-track.html</id>
+        <link href="https://t-regx.com/blog/2017/11/10/back-on-track.html">
         </link>
         <updated>2017-11-10T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>I'm here just to give you guys, a quick update and sum up what's been going on.</p> <p>So, I'm pretty happy with how's the lib looking right now. :) There's a pretty throughout ReadMe.md there on <a href="https://github.com/T-Regx/T-Regx">CleanRegex</a> github, but I bet you I'll expand it with more exa...</p>]]></summary>
@@ -116,8 +116,8 @@ I don't see any reason why developers should keep including those.</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello, World!]]></title>
-        <id>https://t-regx.github.io/blog/2017/05/20/hello-world.html</id>
-        <link href="https://t-regx.github.io/blog/2017/05/20/hello-world.html">
+        <id>https://t-regx.com/blog/2017/05/20/hello-world.html</id>
+        <link href="https://t-regx.com/blog/2017/05/20/hello-world.html">
         </link>
         <updated>2017-05-20T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>Hello, there! I'm very pleased to inform you that I've just started working on an open source Regular Expressions library for PHP. :&gt; I'm really passionate about it and I hope we'll get along really nicely!</p> ]]></summary>
