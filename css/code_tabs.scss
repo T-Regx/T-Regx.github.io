@@ -1,0 +1,27 @@
+.post article {
+  .tabs {
+    border-top: none;
+
+    .nav-tabs {
+      .nav-link {
+        margin-right: 0;
+
+        &:hover {
+          background-color: lightblue;
+        }
+
+        &:first-child {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+blockquote {
+  p {
+    code {
+      white-space: nowrap;
+    }
+  }
+}

@@ -11,7 +11,6 @@
 <url> <loc>https://t-regx.com/blog/2017/12/30/delimiters</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://t-regx.com/blog/2017/11/10/back-on-track</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://t-regx.com/blog/2017/05/20/hello-world</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
-<url> <loc>https://t-regx.com/docs/api/api</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/api/api" /> </url>
 <url> <loc>https://t-regx.com/docs/composite-pattern</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/composite-pattern" /> </url>
 <url> <loc>https://t-regx.com/docs/count</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/count" /> </url>
 <url> <loc>https://t-regx.com/docs/delimiters</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/delimiters" /> </url>

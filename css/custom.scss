@@ -2,6 +2,7 @@
 @import "links";
 @import "splash";
 @import "valentines";
+@import "code_tabs";
 
 .discussion-tregx-grid img {
   margin-top: 50px;
@@ -106,7 +107,7 @@ table.comparison-table {
 }
 
 #scroll-background {
-  background: #1c3c45 url("/img/scroll.background.png") fixed;
+  background: #1c3c45 url("/img/scroll.background.jpg") fixed;
   background-size: cover;
 
   code {
