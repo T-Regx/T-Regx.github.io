@@ -57,9 +57,9 @@
               }
             });
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Advanced replace details</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="introduction"></a><a href="#introduction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction</h2>
-<p>When using <code>pattern()-&gt;match()</code> all <a href="/docs/match-for-each">callbacks</a> receive one parameter when called - <code>Match</code> details
-object. You can learn more about <code>Match</code> on <a href="/docs/match-details">Advanced details page</a>.</p>
-<p>The callback's signature can accept either <code>Match</code> details or <code>string</code>.</p>
+<p>When using <code>pattern()-&gt;match()</code> all <a href="/docs/match-for-each">callbacks</a> receive one parameter when called -
+<a href="/docs/match-details"><code>Match</code></a>. You can learn more about it on <a href="/docs/match-details"><code>Match</code> details</a> page.</p>
+<p>The callback's signature can accept either <a href="/docs/match-details"><code>Match</code></a> details or <code>string</code>.</p>
 <ul>
 <li><code>function (Match $match) {}</code></li>
 <li><code>function (string $match) {}</code></li>
@@ -71,7 +71,8 @@ so they have exactly alike interfaces.</p>
 <li><code>ReplaceMatch.modifiedOffset(): int</code></li>
 <li><code>ReplaceMatch.modifiedSubject(): string</code></li>
 </ul>
-<p>They work similarly to <code>offset()</code> and <code>subject()</code> methods, but they take into account <strong>results of previous callbacks</strong>.</p>
+<p>They work similarly to <a href="/docs/match-offsets"><code>offset()</code></a> and <a href="/docs/match-details#subject"><code>subject()</code></a> methods, but they
+take into account <strong>results of previous callbacks</strong>.</p>
 <ul>
 <li><code>modifiedOffset()</code> returns occurrence's offset, but according to a newly replaced subject.</li>
 <li><code>modifiedSubject()</code> returns current state of a newly replaced subject.</li>
@@ -85,8 +86,9 @@ $result = pattern(<span class="hljs-string">"[A-Z][a-z]+"</span>)-&gt;replace($s
     <span class="hljs-keyword">return</span> <span class="hljs-string">'____'</span>;
 });
 </code></pre>
-<p>having iterated the subject looking for <code>[A-Z][a-z]+</code> - for each <code>Match</code> the result of <code>Match.subject()</code> method would
-always be the same. There are 4 occurrences matched by the pattern, so callback is invoked 4 times.</p>
+<p>having iterated the subject looking for <code>[A-Z][a-z]+</code> - for each <a href="/docs/match-offsets"><code>Match</code></a> the result of
+<code>Match.subject()</code> method would always be the same. There are 4 occurrences matched by the pattern, so callback is
+invoked 4 times.</p>
 <pre><code class="hljs css language-text">Me, Rihanna and my Mom really like Sweden
 </code></pre>
 <pre><code class="hljs css language-text">Me, Rihanna and my Mom really like Sweden
@@ -154,7 +156,7 @@ offset()          // 0
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="performance"></a><a href="#performance" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Performance</h2>
 <p>But be sure, each of those examples only uses one call to <code>preg_replace_callback()</code>. :)</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-21</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/filter"><span class="arrow-prev">← </span><span>Filter an array</span></a><a class="docs-next button" href="/docs/prepared-patterns-in-details"><span>Prepared Patterns in details</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#examples">Examples</a><ul class="toc-headings"><li><a href="#modifiedsubject-example"><code>modifiedSubject()</code> example</a></li><li><a href="#modifiedoffset-example"><code>modifiedOffset()</code> example</a></li></ul></li><li><a href="#performance">Performance</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-25</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/filter"><span class="arrow-prev">← </span><span>Filter an array</span></a><a class="docs-next button" href="/docs/prepared-patterns-in-details"><span>Prepared Patterns in details</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction">Introduction</a></li><li><a href="#examples">Examples</a><ul class="toc-headings"><li><a href="#modifiedsubject-example"><code>modifiedSubject()</code> example</a></li><li><a href="#modifiedoffset-example"><code>modifiedOffset()</code> example</a></li></ul></li><li><a href="#performance">Performance</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Getting Started</a><a href="/docs/match-for-first">Documentation</a><a href="/docs/api/api">API Reference</a></div><div><h5>Community</h5><a href="http://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
 <script>
     (function () {
        if (typeof window.disqus_shortname !== 'undefined') {
