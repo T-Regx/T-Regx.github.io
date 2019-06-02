@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://t-regx.com/blog</id>
     <title>T-Regx Blog</title>
-    <updated>2018-12-06T06:00:00Z</updated>
+    <updated>2019-01-31T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://t-regx.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest T-Regx news and events.</subtitle>
     <logo>https://t-regx.com/img/t.regx.borderless.png</logo>
     <rights>Copyright © 2017-2019 Daniel Wilkowski</rights>
+    <entry>
+        <title type="html"><![CDATA[Match details update]]></title>
+        <id>https://t-regx.com/blog/2019/01/31/match-details-update.html</id>
+        <link href="https://t-regx.com/blog/2019/01/31/match-details-update.html">
+        </link>
+        <updated>2019-01-31T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>Most changes in T-Regx since the last Blog post were to <a href="/docs/match-details"><code>Match</code> details</a>. We added <a href="/docs/match-details#user-data">user data</a> (<a href="/docs/match-details#user-data"><code>getUserData()</code>/<code>setUserData()</code></a>) which can be used in chained calls (e.g. <code>filter()-&gt;map()</code>).</p> <p>The second change is <a href="/docs/match-details#integers"><code>isInt()</code>/<code>parseInt()</code></a> which allow you to handle &q...</p>]]></summary>
+        <author>
+            <name>Daniel Wilkowski</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Santa Clause Day Update]]></title>
         <id>https://t-regx.com/blog/2018/12/06/santa-clause-update.html</id>

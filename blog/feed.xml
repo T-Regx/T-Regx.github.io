@@ -4,7 +4,7 @@
         <title>T-Regx Blog</title>
         <link>https://t-regx.com/blog</link>
         <description>The best place to stay up-to-date with the latest T-Regx news and events.</description>
-        <lastBuildDate>Thu, 06 Dec 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 31 Jan 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://t-regx.com/blog</link>
         </image>
         <copyright>Copyright © 2017-2019 Daniel Wilkowski</copyright>
+        <item>
+            <title><![CDATA[Match details update]]></title>
+            <link>https://t-regx.com/blog/2019/01/31/match-details-update.html</link>
+            <guid>https://t-regx.com/blog/2019/01/31/match-details-update.html</guid>
+            <pubDate>Thu, 31 Jan 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Most changes in T-Regx since the last Blog post were to <a href="/docs/match-details"><code>Match</code> details</a>. We added <a href="/docs/match-details#user-data">user data</a> (<a href="/docs/match-details#user-data"><code>getUserData()</code>/<code>setUserData()</code></a>) which can be used in chained calls (e.g. <code>filter()-&gt;map()</code>).</p> <p>The second change is <a href="/docs/match-details#integers"><code>isInt()</code>/<code>parseInt()</code></a> which allow you to handle &q...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Santa Clause Day Update]]></title>
             <link>https://t-regx.com/blog/2018/12/06/santa-clause-update.html</link>
