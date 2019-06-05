@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://t-regx.com/blog</id>
     <title>T-Regx Blog</title>
-    <updated>2019-01-31T06:00:00Z</updated>
+    <updated>2019-06-05T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://t-regx.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest T-Regx news and events.</subtitle>
     <logo>https://t-regx.com/img/t.regx.borderless.png</logo>
     <rights>Copyright © 2017-2019 Daniel Wilkowski</rights>
+    <entry>
+        <title type="html"><![CDATA[The best Stargazers!]]></title>
+        <id>https://t-regx.com/blog/2019/06/05/stargazers.html</id>
+        <link href="https://t-regx.com/blog/2019/06/05/stargazers.html">
+        </link>
+        <updated>2019-06-05T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>The amount of stargazers just hit 30! We really appreciate your community recognition :) Thank you, for being out there.</p> ]]></summary>
+        <author>
+            <name>Daniel Wilkowski</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Match details update]]></title>
         <id>https://t-regx.com/blog/2019/01/31/match-details-update.html</id>
