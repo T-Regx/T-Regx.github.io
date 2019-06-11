@@ -35,9 +35,9 @@
 <url> <loc>https://t-regx.com/docs/overview</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/overview" /> </url>
 <url> <loc>https://t-regx.com/docs/prepared-patterns-in-details</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/prepared-patterns-in-details" /> </url>
 <url> <loc>https://t-regx.com/docs/prepared-patterns</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/prepared-patterns" /> </url>
-<url> <loc>https://t-regx.com/docs/quote</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/quote" /> </url>
 <url> <loc>https://t-regx.com/docs/quoting</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/quoting" /> </url>
-<url> <loc>https://t-regx.com/docs/replace-by</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/replace-by" /> </url>
+<url> <loc>https://t-regx.com/docs/replace-by-group</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/replace-by-group" /> </url>
+<url> <loc>https://t-regx.com/docs/replace-by-map</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/replace-by-map" /> </url>
 <url> <loc>https://t-regx.com/docs/replace-callback</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/replace-callback" /> </url>
 <url> <loc>https://t-regx.com/docs/replace-match-details</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/replace-match-details" /> </url>
 <url> <loc>https://t-regx.com/docs/replace-with</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://t-regx.com/docs/replace-with" /> </url>
