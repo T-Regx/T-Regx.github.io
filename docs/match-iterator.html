@@ -1,0 +1,116 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Iterator · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;T-Regx uses vanilla PHP &lt;a href=&quot;https://www.php.net/manual/en/class.iterator.php&quot;&gt;&lt;code&gt;Iterator&lt;/code&gt;&lt;/a&gt; with standard methods:&lt;/p&gt;
+"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Iterator · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.com/"/><meta property="og:description" content="&lt;p&gt;T-Regx uses vanilla PHP &lt;a href=&quot;https://www.php.net/manual/en/class.iterator.php&quot;&gt;&lt;code&gt;Iterator&lt;/code&gt;&lt;/a&gt; with standard methods:&lt;/p&gt;
+"/><meta property="og:image" content="https://t-regx.com//img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.com//img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.com/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.com/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
+          )
+        });
+        </script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search the website" title="Search the website"/></li><li class="siteNavGroupActive"><a href="/docs/installation" target="_self">Docs</a></li><li class=""><a href="/comparison" target="_self">Compare</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Matching</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">About</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/overview">What&#x27;s T-Regx?</a></li><li class="navListItem"><a class="navItem" href="/docs/whats-the-point">Why would I use T-Regx?</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Kick Start</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/installation">Installation</a></li><li class="navListItem"><a class="navItem" href="/docs/introduction">Introduction</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Matching</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/match">Match a subject</a></li><li class="navListItem"><a class="navItem" href="/docs/match-first">First occurrence</a></li><li class="navListItem"><a class="navItem" href="/docs/match-for-first">Optional matches</a></li><li class="navListItem"><a class="navItem" href="/docs/match-for-each">For Each/Iterate</a></li><li class="navListItem"><a class="navItem" href="/docs/match-map">Map occurrences</a></li><li class="navListItem"><a class="navItem" href="/docs/match-flat-map">Map with keys (Flat map)</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/match-iterator">Iterator</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Replacing</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/replace">Replacing a string</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-with">Replace with a constant value</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-callback">Replace with callback</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-by-group">Replace by group</a></li><li class="navListItem"><a class="navItem" href="/docs/replace-by-map">Replace by map</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Match Details</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/match-details">Match details</a></li><li class="navListItem"><a class="navItem" href="/docs/match-groups">Capturing groups</a></li><li class="navListItem"><a class="navItem" href="/docs/match-offsets">Match offsets</a></li><li class="navListItem"><a class="navItem" href="/docs/match-group">Inline groups</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Prepared Patterns</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/handling-user-input">Handling user input</a></li><li class="navListItem"><a class="navItem" href="/docs/prepared-patterns">Prepared Patterns - User input</a></li><li class="navListItem"><a class="navItem" href="/docs/composite-pattern">Composite Pattern</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Misc</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/delimiters">Automatic delimiters</a></li><li class="navListItem"><a class="navItem" href="/docs/count">Count occurrences</a></li><li class="navListItem"><a class="navItem" href="/docs/quoting">Quoting</a></li><li class="navListItem"><a class="navItem" href="/docs/is-valid">Validate a pattern</a></li><li class="navListItem"><a class="navItem" href="/docs/split">Split a string</a></li><li class="navListItem"><a class="navItem" href="/docs/filter">Filter an array</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Advanced</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/replace-match-details">Advanced replace details</a></li><li class="navListItem"><a class="navItem" href="/docs/prepared-patterns-in-details">Prepared Patterns in details</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Iterator</h1></header><article><div><span><p>T-Regx uses vanilla PHP <a href="https://www.php.net/manual/en/class.iterator.php"><code>Iterator</code></a> with standard methods:</p>
+<ul>
+<li><code>current()</code></li>
+<li><code>key(): scalar</code></li>
+<li><code>next(): void</code></li>
+<li><code>rewind(): void</code></li>
+<li><code>valid(): bool</code></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="iterator-to-array"></a><a href="#iterator-to-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Iterator to array</h1>
+<p>Method <code>match()-&gt;iterator()</code> returns an implementation of PHP <a href="https://www.php.net/manual/en/class.iterator.php"><code>Iterator</code></a>
+which you can be used with other <code>Iterator</code> methods or your own code, for example PHP methods
+<a href="https://www.php.net/manual/en/function.iterator-to-array.php">iterator_to_array()</a> and
+<a href="https://www.php.net/manual/en/function.iterator-count.php">iterator_count()</a>.</p>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-43-tab-44" class="nav-link active" data-group="group_43" data-tab="tab-group-43-content-44">T-Regx</div><div id="tab-group-43-tab-45" class="nav-link" data-group="group_43" data-tab="tab-group-43-content-45">PHP</div></div><div class="tab-content"><div id="tab-group-43-content-44" class="tab-pane active" data-group="group_43" tabindex="-1"><div><span><pre><code class="hljs css language-php">$iterator = pattern(<span class="hljs-string">'\w+'</span>)-&gt;match(<span class="hljs-string">'Apples are cool'</span>)-&gt;iterator();<br /><br /><span class="hljs-keyword">return</span> iterator_to_array($iterator);<br /></code></pre>
+</span></div></div><div id="tab-group-43-content-45" class="tab-pane" data-group="group_43" tabindex="-1"><div><span><pre><code class="hljs css language-php">preg::match_all(<span class="hljs-string">'/\w+/'</span>, <span class="hljs-string">'Apples are cool'</span>, $matches);<br />$iterator = <span class="hljs-keyword">new</span> ArrayIterator($matches[<span class="hljs-number">0</span>]);<br /><br /><span class="hljs-keyword">return</span> iterator_to_array($iterator);<br /></code></pre>
+</span></div></div></div></div>
+<!--Result-Value-->
+<pre><code class="hljs css language-php">[<span class="hljs-string">'Apples'</span>, <span class="hljs-string">'are'</span>, <span class="hljs-string">'cool'</span>]
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-22</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/match-flat-map"><span class="arrow-prev">← </span><span>Map with keys (Flat map)</span></a><a class="docs-next button" href="/docs/replace"><span>Replacing a string</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
+<script>
+    (function () {
+       if (typeof window.disqus_shortname !== 'undefined') {
+            return;
+        }
+        window.disqus_shortname = 't-regx';
+        window.disqus_identifier = '46dff8e37535ddb3571510672d1af48683bad013';
+        window.disqus_title = 'Questions about T-Regx';
+        window.disqus_url = 'http://localhost:3000/help';
+        if (window.DISQUS === undefined) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://t-regx.disqus.com/embed.js';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        } else {
+            window.DISQUS.reset({reload: true});
+        }
+    })();
+</script></div><div id="disqus_thread"></div></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
+                indexName: 't-regx',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
