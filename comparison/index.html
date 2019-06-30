@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang=""><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>T-Regx · Bulletproof and powerful Regular Expressions for PHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:title" content="T-Regx · Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.com/"/><meta property="og:description" content="Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:image" content="https://t-regx.com//img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.com//img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.com/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.com/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+<!DOCTYPE html><html lang=""><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>T-Regx · Bulletproof and powerful Regular Expressions for PHP</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:title" content="T-Regx · Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.com/"/><meta property="og:description" content="Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:image" content="https://t-regx.com//img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.com//img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.com/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.com/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
           addBackToTop(
             {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
@@ -7,31 +7,45 @@
         </script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search the website" title="Search the website"/></li><li class=""><a href="/docs/installation" target="_self">Docs</a></li><li class="siteNavItemActive"><a href="/comparison" target="_self">Compare</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class=""><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer documentContainer postContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1>Comparison table of plain PHP and T-Regx</h1><div><span><p>Here's a little table of some of the differences between the behaviour of plain PHP <code>preg_*()</code> methods and T-Regx API.</p>
 </span></div></header><table class="comparison-table" width="100%" border="0" cellSpacing="0" cellPadding="0"><thead><tr><th></th><th>Plain PHP</th><th>T-Regx</th></tr><tr class="logo-row"><th></th><th><img src="/img/comparison/php.png" alt="Plain PHP"/></th><th><img src="/img/t.regx.png" alt="T-Regx"/></th></tr></thead><tbody><tr><td><div><span><p>Invalid pattern<sup>(eg. <code>/unclosed[A-/</code>)</sup></p>
 </span></div></td><td><div><span><p>Issues a warning</p>
-</span></div></td><td><div><span><p>throws <code>MalformedPatternException</code> with descriptive error message</p>
+</span></div></td><td><div><span><p><code>MalformedPatternException</code> with descriptive message</p>
 </span></div></td></tr><tr><td><div><span><p>Corrupted subject<sup>(eg. malformed utf-8 sequence)</sup></p>
 </span></div></td><td><div><span><ul>
 <li>Different methods return different error values (<code>false</code>, <code>null</code> or <code>[]</code>)</li>
 <li><code>preg_last_error()</code> returns error code</li>
 </ul>
-</span></div></td><td><div><span><p>throws <code>RuntimeCleanRegexException</code> with descriptive error message</p>
+</span></div></td><td><div><span><p><code>RuntimeCleanRegexException</code> with descriptive message</p>
 </span></div></td></tr><tr><td><div><span><p>Overly complex pattern<sup>(eg. containing <code>?R</code>)</sup></p>
 </span></div></td><td><div><span><ul>
 <li>No warning</li>
 <li><code>preg_last_error()</code> returns error code</li>
 </ul>
-</span></div></td><td><div><span><p>throws <code>RuntimeSafeRegexException</code> with descriptive error message</p>
-</span></div></td></tr><tr><td><div><span><p>Using invalid capturing group name<sup>(eg. name <code>!@#$</code>, index <code>-2</code>)</sup></p>
+</span></div></td><td><div><span><p><code>RuntimeSafeRegexException</code> with descriptive message</p>
+</span></div></td></tr><tr><td><div><span><p>Returning an invalid replacement value</p>
+</span></div></td><td><div><span><ul>
+<li><code>preg_last_error()</code> returns <strong>success</strong> code <sup>(returns <code>PREG_NO_ERROR</code>)</sup></li>
+<li>Silently converts the value to string <sup>(e.g. <code>integer</code>)<sup></li>
+<li>Raises a warning <sup>(e.g. <code>array</code>)<sup></li>
+<li>Throws a fatal error, terminating the application <sup>(e.g. <code>stdClass</code>, objects without <code>__toString</code>)<sup></li>
+</ul>
+</span></div></td><td><div><span><p><code>InvalidReplacementException</code> with descriptive message</p>
+</span></div></td></tr><tr><td><div><span><p>Using an invalid capturing group name<sup>(eg. name <code>!@#$</code>, index <code>-2</code>)</sup></p>
 </span></div></td><td><div><span><p>Actually tries to get the group</p>
-</span></div></td><td><div><span><p>throws <code>InvalidArgumentException</code> with descriptive message</p>
-</span></div></td></tr><tr><td><div><span><p>Using a nonexistent group<sup>(one that was not used in the pattern)</sup></p>
+</span></div></td><td><div><span><p><code>InvalidArgumentException</code> with descriptive message</p>
+</span></div></td></tr><tr><td><div><span><p>Using a nonexistent group<sup>(group name typo, group deleted)</sup></p>
 </span></div></td><td><div><span><p>Actually tries to get the group</p>
-</span></div></td><td><div><span><p>throws <code>NonexistentGroupException</code> with descriptive message</p>
+</span></div></td><td><div><span><p><code>NonexistentGroupException</code> with descriptive message</p>
+</span></div></td></tr><tr><td><div><span><p>Using an un-matched group<sup>(conditional group, unmatched by subject)</p>
+</span></div></td><td><div><span><p>Actually tries to get the group</p>
+</span></div></td><td><div><span><p><code>GroupNotMatchedException</code> with descriptive message</p>
 </span></div></td></tr><tr><td><div><span><p>Offsets in UTF-8<sup>(eg. 18€)</sup></p>
 </span></div></td><td><div><span><p>In bytes<sup>5 bytes</sup></p>
-</span></div></td><td><div><span><p>In characters<sup>3 characters</sup></p>
+</span></div></td><td><div><span><ul>
+<li>Method <code>offset()</code> - 3 characters</li>
+<li>Method <code>byteOffset()</code> - 5 bytes</li>
+</ul>
 </span></div></td></tr><tr><td><div><span><p>Worst case complexity</p>
-</span></div></td><td><div><span><p>array of arrays of arrays of string/null and integer<sup>preg_match_all() with PREG_OFFSET_CAPTURE</sup></p>
-</span></div></td><td><div><span><p>array of strings<sup>All matches or all groups</sup></p>
+</span></div></td><td><div><span><p><code>(string|int|null)[][][]</code><sup>array of arrays of arrays of string/null and integer - <code>preg_match_all()</code> with <code>PREG_OFFSET_CAPTURE</code></sup></p>
+</span></div></td><td><div><span><p><code>string[]</code><sup>array of strings</sup></p>
 </span></div></td></tr></tbody></table><div><div>
 <script>
     (function () {
