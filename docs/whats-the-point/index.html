@@ -187,7 +187,7 @@ function. For example, it could have filtered out all values or its input was an
 <li>In other, more frequent cases - one of the <code>CleanRegexException</code> implementations os thrown:
 <ul>
 <li><code>SubjectNotMatchedException</code></li>
-<li><code>InvalidPatternException</code></li>
+<li><code>MalformedPatternException</code></li>
 <li><code>InvalidReplacementException</code></li>
 <li>etc.</li>
 </ul></li>
@@ -228,7 +228,7 @@ it returns <code>false</code> (or sometimes <code>null</code> or an empty array)
 <p>Furthermore, T-Regx throws different exceptions for different errors:</p>
 <ul>
 <li>SubjectNotMatchedException</li>
-<li>InvalidPatternException</li>
+<li>MalformedPatternException</li>
 <li>FlagNotAllowedException</li>
 <li>GroupNotMatchedException</li>
 <li>NonexistentGroupException</li>
@@ -268,7 +268,7 @@ pattern(<span class="hljs-string">'[A-Z]+'</span>)-&gt;replace($subject)-&gt;fir
 });
 </code></pre>
 <p>Read more about <a href="/docs/match-details"><code>Match</code> details</a>.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-25</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/overview"><span class="arrow-prev">← </span><span>What&#x27;s T-Regx?</span></a><a class="docs-next button" href="/docs/installation"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-s-wrong-with-php-regular-expressions">What's wrong with PHP Regular Expressions:</a><ul class="toc-headings"><li><a href="#implicit">Implicit</a></li><li><a href="#unintuitive">Unintuitive</a></li><li><a href="#messy">Messy</a></li><li><a href="#inconsistent">Inconsistent</a></li><li><a href="#deliberately-buggy">Deliberately buggy</a></li></ul></li><li><a href="#t-regx-to-the-rescue">T-Regx to the rescue</a><ul class="toc-headings"><li><a href="#it-s-bulletproof">It's bulletproof</a></li><li><a href="#it-s-descriptive">It's descriptive</a></li><li><a href="#it-s-for-developers-it-s-reliable">It's for developers (it's reliable)</a></li><li><a href="#it-s-explicit">It's explicit</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-30</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/overview"><span class="arrow-prev">← </span><span>What&#x27;s T-Regx?</span></a><a class="docs-next button" href="/docs/installation"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-s-wrong-with-php-regular-expressions">What's wrong with PHP Regular Expressions:</a><ul class="toc-headings"><li><a href="#implicit">Implicit</a></li><li><a href="#unintuitive">Unintuitive</a></li><li><a href="#messy">Messy</a></li><li><a href="#inconsistent">Inconsistent</a></li><li><a href="#deliberately-buggy">Deliberately buggy</a></li></ul></li><li><a href="#t-regx-to-the-rescue">T-Regx to the rescue</a><ul class="toc-headings"><li><a href="#it-s-bulletproof">It's bulletproof</a></li><li><a href="#it-s-descriptive">It's descriptive</a></li><li><a href="#it-s-for-developers-it-s-reliable">It's for developers (it's reliable)</a></li><li><a href="#it-s-explicit">It's explicit</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
 <script>
     (function () {
        if (typeof window.disqus_shortname !== 'undefined') {
