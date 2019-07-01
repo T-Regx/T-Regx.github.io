@@ -4,7 +4,7 @@
         <title>T-Regx Blog</title>
         <link>https://t-regx.com/blog</link>
         <description>The best place to stay up-to-date with the latest T-Regx news and events.</description>
-        <lastBuildDate>Wed, 05 Jun 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jul 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://t-regx.com/blog</link>
         </image>
         <copyright>Copyright © 2017-2019 Daniel Wilkowski</copyright>
+        <item>
+            <title><![CDATA["The best Stargazers!" Reloaded]]></title>
+            <link>https://t-regx.com/blog/2019/07/01/crazy-stargazers.html</link>
+            <guid>https://t-regx.com/blog/2019/07/01/crazy-stargazers.html</guid>
+            <pubDate>Mon, 01 Jul 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Holy guacamole! There were only 30 stars a few weeks ago and we have 40 already!? :D You guys gave us even more reason to release T-Regx 0.9.2 even sooner! Two new features are coming:</p> <ul> <li>In-group replacing 😲 You can now replace a single group inside y...</li></ul>]]></description>
+        </item>
         <item>
             <title><![CDATA[The best Stargazers!]]></title>
             <link>https://t-regx.com/blog/2019/06/05/stargazers.html</link>
