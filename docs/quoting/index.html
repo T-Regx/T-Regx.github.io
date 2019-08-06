@@ -63,13 +63,17 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Quoting</h1></header><article><div><span><p>There are two methods <code>Pattern::quote()</code> and <code>Pattern::unquote()</code>.</p>
 <p>First of which works as <code>preg_quote()</code> is supposed to
 work (except for the fact that <code>preg_quote()</code> is broken before PHP 7.1.3 version, and <code>Pattern::quote()</code> fixes it)...</p>
-<pre><code class="hljs css language-php">Pattern::quote(<span class="hljs-string">"Welcome\How are you?"</span>);
-</code></pre>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-147-tab-148" class="nav-link active" data-group="group_147" data-tab="tab-group-147-content-148">T-Regx</div></div><div class="tab-content"><div id="tab-group-147-content-148" class="tab-pane active" data-group="group_147" tabindex="-1"><div><span><pre><code class="hljs css language-php">Pattern::quote(<span class="hljs-string">"Welcome\How are you?"</span>);<br /></code></pre>
+</span></div></div></div></div>
+<!--T-Regx:{echo-at(0)}-->
+<!--Result-Output-->
 <pre><code class="hljs css language-text">Welcome\\How are you\?
 </code></pre>
 <p>...second of which is the direct opposite:</p>
-<pre><code class="hljs css language-php">Pattern::unquote(<span class="hljs-string">"Welcome\\How are you\?"</span>);
-</code></pre>
+<div class="tabs"><div class="nav-tabs"><div id="tab-group-149-tab-150" class="nav-link active" data-group="group_149" data-tab="tab-group-149-content-150">T-Regx</div></div><div class="tab-content"><div id="tab-group-149-content-150" class="tab-pane active" data-group="group_149" tabindex="-1"><div><span><pre><code class="hljs css language-php">Pattern::unquote(<span class="hljs-string">"Welcome\\How are you\?"</span>);<br /></code></pre>
+</span></div></div></div></div>
+<!--T-Regx:{echo-at(0)}-->
+<!--Result-Output-->
 <pre><code class="hljs css language-text">Welcome\How are you?
 </code></pre>
 <p>Please, keep in mind that this <strong>is not</strong> a safe way to create patterns with unsafe characters - for that, consider
@@ -79,7 +83,7 @@ using <a href="/docs/prepared-patterns">Prepared Patterns</a>.</p>
 <pre><code class="hljs css language-php">$output = Pattern::unquote(Pattern::quote($input));
 </code></pre>
 <p>The contract is <code>$input === $output</code> for any <code>$input</code> value.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-6-30</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/count"><span class="arrow-prev">← </span><span>Count occurrences</span></a><a class="docs-next button" href="/docs/is-valid"><span>Validate a pattern</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#contract">Contract</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-8-5</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/count"><span class="arrow-prev">← </span><span>Count occurrences</span></a><a class="docs-next button" href="/docs/is-valid"><span>Validate a pattern</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#contract">Contract</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
 <script>
     (function () {
        if (typeof window.disqus_shortname !== 'undefined') {
