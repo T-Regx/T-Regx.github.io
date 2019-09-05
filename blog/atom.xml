@@ -2,12 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://t-regx.com/blog</id>
     <title>T-Regx Blog</title>
-    <updated>2019-07-01T06:00:00Z</updated>
+    <updated>2019-08-31T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://t-regx.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest T-Regx news and events.</subtitle>
     <logo>https://t-regx.com/img/t.regx.borderless.png</logo>
     <rights>Copyright © 2017-2019 Daniel Wilkowski</rights>
+    <entry>
+        <title type="html"><![CDATA[The best Stargazers' Revolutions]]></title>
+        <id>https://t-regx.com/blog/2019/08/31/super-duper-stargazers.html</id>
+        <link href="https://t-regx.com/blog/2019/08/31/super-duper-stargazers.html">
+        </link>
+        <updated>2019-08-31T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p><a href="/t-rix">I have imagined this moment for a long time. Is it real?</a> Could it be T-Regx got <strong>60</strong> stars ? :D</p> <p>But what's new.</p> <p>There is <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>preg_grep()</code></a> function for filtering an array by a pattern, unfortunately there's no flag or another method to filter it by keys. The...</p>]]></summary>
+        <author>
+            <name>Daniel Wilkowski</name>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA["The best Stargazers!" Reloaded]]></title>
         <id>https://t-regx.com/blog/2019/07/01/crazy-stargazers.html</id>
