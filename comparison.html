@@ -46,6 +46,9 @@
 </span></div></td></tr><tr><td><div><span><p>Worst case complexity</p>
 </span></div></td><td><div><span><p><code>(string|int|null)[][][]</code><sup>array of arrays of arrays of string/null and integer - <code>preg_match_all()</code> with <code>PREG_OFFSET_CAPTURE</code></sup></p>
 </span></div></td><td><div><span><p><code>string[]</code><sup>array of strings</sup></p>
+</span></div></td></tr><tr><td><div><span><p>Accidents of Fatal Errors <sup>(terminating the application)</sup></p>
+</span></div></td><td><div><span><p>Allows fatal errors <sup>(e.g. <code>preg_grep([ array() ])</code>)</p>
+</span></div></td><td><div><span><p><code>\InvalidArgumentException</code> with descriptive message</p>
 </span></div></td></tr></tbody></table><div><div>
 <script>
     (function () {
