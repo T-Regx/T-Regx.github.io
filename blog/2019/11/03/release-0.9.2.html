@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Release 0.9.2 · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="😎 T-Regx is more than happy to announce its third alpha version!! As mentioned, despite the `alpha` suffix, it&#x27;s 100% suitable for production use. It doesn&#x27;t have any known bugs - it&#x27;s just missing a few time-consuming features."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Release 0.9.2 · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.com/blog/2019/11/03/release-0.9.2"/><meta property="og:description" content="😎 T-Regx is more than happy to announce its third alpha version!! As mentioned, despite the `alpha` suffix, it&#x27;s 100% suitable for production use. It doesn&#x27;t have any known bugs - it&#x27;s just missing a few time-consuming features."/><meta property="og:image" content="https://t-regx.com//img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.com//img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.com/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.com/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search the website" title="Search the website"/></li><li class=""><a href="/docs/installation" target="_self">Docs</a></li><li class=""><a href="/comparison" target="_self">Compare</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="siteNavGroupActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All Blog Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All Blog Posts</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/blog/2019/11/03/release-0.9.2">Release 0.9.2</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/10/15/dont-forget-about-t-regx">Don&#x27;t forget about T-Regx</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/08/31/super-duper-stargazers">The best Stargazers&#x27; Revolutions</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/07/01/crazy-stargazers">&quot;The best Stargazers!&quot; Reloaded</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/06/05/stargazers">The best Stargazers!</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/01/31/match-details-update">Match details update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/12/06/santa-clause-update">Santa Clause Day Update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/09/24/welcome-t-regx">Welcome T-Regx</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/09/01/groups">Capturing groups update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/03/php-5.3-support">Support for PHP 5.3</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/12/30/safe-regex">What&#x27;s new, new, new! Part 2</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/12/30/delimiters">What&#x27;s new, new, new!</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/11/10/back-on-track">Back on track!</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/05/20/hello-world">Hello, World!</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="lonePost"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/11/03/release-0.9.2">Release 0.9.2</a></h1><p class="post-meta">November 3, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><div><span><p>😎 T-Regx is more than happy to announce its third alpha version!! As mentioned, despite the <code>alpha</code> suffix, it's 100% suitable for production use. It doesn't have any known bugs - it's just missing a few time-consuming features.</p>
+<p>What's new in this release:</p>
+<ul>
+<li>Breaking changes
+<ul>
+<li>Constructor <code>new Pattern()</code> is no longer a part of T-Regx API. Use <code>Pattern::of()</code>/<code>pattern()</code></li>
+<li>Renamed <code>Match.parseInt()</code> to <code>Match.toInt()</code> (the same for <code>MatchGroup</code>)</li>
+<li>Removed <code>pattern()-&gt;match()-&gt;test()</code>/<code>fails()</code>. From now on, use <code>pattern()-&gt;test()</code>/<code>fails()</code></li>
+<li>Removed <code>is()</code>:
+<ul>
+<li><code>is()-&gt;delimited()</code></li>
+<li><code>is()-&gt;usabled()</code></li>
+<li><code>is()-&gt;valid()</code> is changed to <code>valid()</code></li>
+</ul></li>
+</ul></li>
+<li>Features
+<ul>
+<li>Added <code>Match.group().replace()</code> 🔥</li>
+<li>Added <code>pattern()-&gt;match()-&gt;fluent()</code> 🔥</li>
+<li>Added <code>pattern()-&gt;match()-&gt;asInt()</code></li>
+<li>Added <code>pattern()-&gt;match()-&gt;distinct()</code> (leaves only unique matches)</li>
+<li>Added prepared pattern method <code>Pattern::inject()</code>/<code>Pattern::bind()</code> (see below)</li>
+<li>In <code>pattern()-&gt;match()-&gt;groups()</code>:
+<ul>
+<li>Added <code>groups()-&gt;forEach()</code>/<code>iterate()</code></li>
+<li>Added <code>groups()-&gt;flatMap()</code></li>
+<li>Added <code>groups()-&gt;map()</code></li>
+<li>Added <code>group()-&gt;fluent()</code></li>
+<li>Added <code>groups()-&gt;names()</code> (and <code>namedGroups()-&gt;names()</code>)</li>
+<li>Added <code>groups()-&gt;count()</code> (and <code>namedGroups()-&gt;count()</code>)</li>
+</ul></li>
+<li>Added <code>pattern()-&gt;forArray()-&gt;strict()</code> which throws for invalid values, instead of filtering them out</li>
+</ul></li>
+<li>SafeRegex
+<ul>
+<li>Added <code>preg::grep_keys()</code> 🔥, that works exactly like <code>preg::grep()</code>, but filters by keys (also accepts <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>PREG_GREP_INVERT</code></a>)</li>
+<li>Methods <code>preg::grep()</code>, <code>preg::replace_callback()</code> and <code>preg::replace_callback_array()</code> are now protected from throwing Fatal Errors.</li>
+</ul></li>
+<li>Enhancements/updates
+<ul>
+<li>Method <code>by()-&gt;group()-&gt;orElse()</code> now receives lazy-loaded <code>Match</code>, instead of a subject</li>
+<li>Added <code>withReferences()</code> to <code>CompositePattern.chainedReplace()</code></li>
+<li>Previously named <code>Pattern::inject()</code> is renamed to <code>Pattern::bind()</code></li>
+<li>The <code>Pattern::bind()</code> (old <code>Pattern::inject()</code>) still accepts values as an associative array, but new <code>Pattern::inject()</code> receives values without regard for the keys.</li>
+<li>Fixed passing invalid types to <code>forArray()</code>. Previously, caused fatal error due to internal implementation.</li>
+</ul></li>
+<li>Other
+<ul>
+<li>Now <code>MalformedPatternException</code> is thrown, instead of <code>CompileSafeRegexException</code>, when using invalid PCRE syntax.</li>
+<li>Returning <code>Match</code> from <code>replace()-&gt;callback()</code> (instead of <code>Match.text()</code> as <code>string</code>)</li>
+<li>Match <code>+12</code> is no longer considered a valid integer for <code>isInt()</code>/<code>toInt()</code></li>
+<li>Unnamed group will be represented as <code>null</code> in <code>Match.groupNames()</code>, instead of being simply ignored</li>
+</ul></li>
+<li>Maintenance
+<ul>
+<li>PhpUnit throws different exceptions because of <a href="https://wiki.php.net/rfc/tostring_exceptions">PHP <code>__toString()</code> exception policy change</a>.</li>
+</ul></li>
+</ul>
+</span></div></div><div class="blogSocialSection"></div></div><div class="blog-recent"><a class="button" href="/blog">Recent Posts</a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
+<script>
+    (function () {
+       if (typeof window.disqus_shortname !== 'undefined') {
+            return;
+        }
+        window.disqus_shortname = 't-regx';
+        window.disqus_identifier = '46dff8e37535ddb3571510672d1af48683bad013';
+        window.disqus_title = 'Questions about T-Regx';
+        window.disqus_url = 'http://localhost:3000/help';
+        if (window.DISQUS === undefined) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://t-regx.disqus.com/embed.js';
+            document.getElementsByTagName('head')[0].appendChild(script);
+        } else {
+            window.DISQUS.reset({reload: true});
+        }
+    })();
+</script></div><div id="disqus_thread"></div></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
+                indexName: 't-regx',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

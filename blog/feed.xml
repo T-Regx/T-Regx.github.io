@@ -4,7 +4,7 @@
         <title>T-Regx Blog</title>
         <link>https://t-regx.com/blog</link>
         <description>The best place to stay up-to-date with the latest T-Regx news and events.</description>
-        <lastBuildDate>Tue, 15 Oct 2019 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 03 Nov 2019 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,13 @@
             <link>https://t-regx.com/blog</link>
         </image>
         <copyright>Copyright © 2017-2019 Daniel Wilkowski</copyright>
+        <item>
+            <title><![CDATA[Release 0.9.2]]></title>
+            <link>https://t-regx.com/blog/2019/11/03/release-0.9.2.html</link>
+            <guid>https://t-regx.com/blog/2019/11/03/release-0.9.2.html</guid>
+            <pubDate>Sun, 03 Nov 2019 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>😎 T-Regx is more than happy to announce its third alpha version!! As mentioned, despite the <code>alpha</code> suffix, it's 100% suitable for production use. It doesn't have any known bugs - it's just missing a few time-consuming features.</p> <p>What's new in this rele...</p>]]></description>
+        </item>
         <item>
             <title><![CDATA[Don't forget about T-Regx]]></title>
             <link>https://t-regx.com/blog/2019/10/15/dont-forget-about-t-regx.html</link>
