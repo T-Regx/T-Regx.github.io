@@ -1,185 +1,113 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Blog · T-Regx</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Bulletproof and powerful Regular Expressions for PHP"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Blog · T-Regx"/><meta property="og:type" content="website"/><meta property="og:url" content="https://t-regx.com/"/><meta property="og:description" content="Bulletproof and powerful Regular Expressions for PHP"/><meta property="og:image" content="https://t-regx.com//img/docusaurus.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://t-regx.com//img/docusaurus.png"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css"/><link rel="alternate" type="application/atom+xml" href="https://t-regx.com/blog/atom.xml" title="T-Regx Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://t-regx.com/blog/feed.xml" title="T-Regx Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
-        document.addEventListener('DOMContentLoaded', function() {
-          addBackToTop(
-            {"zIndex":100,"showWhenScrollTopIs":190,"scrollDuration":400,"backgroundColor":"#26768c"}
-          )
-        });
-        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="blog"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><h2 class="headerTitleWithLogo">T-Regx</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search the website" title="Search the website"/></li><li class=""><a href="/docs/installation" target="_self">Docs</a></li><li class=""><a href="/comparison" target="_self">Compare</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/blog/" target="_self">Blog</a></li><li class=""><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>All Blog Posts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">All Blog Posts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/blog/2019/10/15/dont-forget-about-t-regx">Don&#x27;t forget about T-Regx</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/08/31/super-duper-stargazers">The best Stargazers&#x27; Revolutions</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/07/01/crazy-stargazers">&quot;The best Stargazers!&quot; Reloaded</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/06/05/stargazers">The best Stargazers!</a></li><li class="navListItem"><a class="navItem" href="/blog/2019/01/31/match-details-update">Match details update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/12/06/santa-clause-update">Santa Clause Day Update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/09/24/welcome-t-regx">Welcome T-Regx</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/09/01/groups">Capturing groups update</a></li><li class="navListItem"><a class="navItem" href="/blog/2018/03/03/php-5.3-support">Support for PHP 5.3</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/12/30/safe-regex">What&#x27;s new, new, new! Part 2</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/12/30/delimiters">What&#x27;s new, new, new!</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/11/10/back-on-track">Back on track!</a></li><li class="navListItem"><a class="navItem" href="/blog/2017/05/20/hello-world">Hello, World!</a></li></ul></div></div></section></div><script>
-            var coll = document.getElementsByClassName('collapsible');
-            var checkActiveCategory = true;
-            for (var i = 0; i < coll.length; i++) {
-              var links = coll[i].nextElementSibling.getElementsByTagName('*');
-              if (checkActiveCategory){
-                for (var j = 0; j < links.length; j++) {
-                  if (links[j].classList.contains('navListItemActive')){
-                    coll[i].nextElementSibling.classList.toggle('hide');
-                    coll[i].childNodes[1].classList.toggle('rotate');
-                    checkActiveCategory = false;
-                    break;
-                  }
-                }
-              }
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<script type="text/javascript">/*<![CDATA[*/window.__chunkMapping={"17896441":["/17896441.be24f435.css","/17896441.9281f578.js"],"25467531":["/25467531.53bb8858.js"],"42639545":["/42639545.8da366e7.js"],"72465809":["/72465809.c3db42af.js"],"main":["/main.d1659d61.css","/main.03d410a1.js"],"000b235a":["/000b235a.ee4ea7c2.css","/000b235a.a57aaccf.js"],"029fe761":["/029fe761.07587008.js"],"041f662b":["/041f662b.0bab3d82.js"],"042a787e":["/042a787e.f788d198.js"],"04bf14f1":["/04bf14f1.291901ec.js"],"05127450":["/05127450.06ca9259.js"],"07a94733":["/07a94733.5d582ad2.js"],"081c2abc":["/081c2abc.1b5fcc06.js"],"098f0b8a":["/098f0b8a.14419c11.js"],"09f67560":["/09f67560.7da7f6c2.js"],"0a247942":["/0a247942.db43c08f.js"],"0aca5efe":["/0aca5efe.f45f3178.js"],"0bc2fab3":["/0bc2fab3.854f1cf9.js"],"0cad2181":["/0cad2181.fb852fcd.js"],"0ec4273f":["/0ec4273f.2c7173f0.js"],"12f0358b":["/12f0358b.00fbcc14.js"],"132daa94":["/132daa94.8ba27b0b.js"],"1a9639fa":["/1a9639fa.e29087f8.js"],"1ad455fd":["/1ad455fd.79b7f849.js"],"1be78505":["/1be78505.bb8b0553.css","/1be78505.95ce0836.js"],"1f062116":["/1f062116.dd1436cf.js"],"21ea3e20":["/21ea3e20.4aac87b5.js"],"221ea57a":["/221ea57a.cc27dd08.js"],"24460db1":["/24460db1.adcdccf5.js"],"252aac43":["/252aac43.0aea0b4b.js"],"2893b945":["/2893b945.788aa792.js"],"28f6cfc2":["/28f6cfc2.1812b789.js"],"2ac23ad8":["/2ac23ad8.a73e9479.js"],"2ae560bb":["/2ae560bb.1742fd64.js"],"2ba476a1":["/2ba476a1.4381e433.js"],"2e4b873d":["/2e4b873d.037b4864.js"],"2eafc6de":["/2eafc6de.2c98e240.js"],"309884b4":["/309884b4.da5cb295.js"],"32b47379":["/32b47379.548775d2.js"],"374802d7":["/374802d7.a99b8de6.js"],"38eeecbf":["/38eeecbf.7d56e6ce.js"],"398dfd4c":["/398dfd4c.1c243b93.js"],"3b0db118":["/3b0db118.520f8cc9.js"],"3d273fc1":["/3d273fc1.62594f11.js"],"3df9eee4":["/3df9eee4.568d1089.js"],"3e2c5166":["/3e2c5166.13544824.js"],"3fdf764f":["/3fdf764f.b8c82213.js"],"43f3c576":["/43f3c576.a86ff6e5.js"],"4546cec5":["/4546cec5.71acd9f5.js"],"46419bba":["/46419bba.4d59ccdf.js"],"47548e79":["/47548e79.006194b6.js"],"4c84d289":["/4c84d289.43494a89.js"],"52df82c0":["/52df82c0.a7a84c4f.js"],"5badc105":["/5badc105.d49823bd.js"],"5d5fec46":["/5d5fec46.bdfa5bd8.js"],"5d814b2b":["/5d814b2b.2b4875e4.js"],"5de11689":["/5de11689.211bf71b.js"],"5e1501a2":["/5e1501a2.e2246a3e.js"],"5fd5d13f":["/5fd5d13f.038cbc3c.js"],"613e8680":["/613e8680.89ec3fde.js"],"6483ec16":["/6483ec16.cec2db8d.js"],"6a16626d":["/6a16626d.73548b36.js"],"722aeb36":["/722aeb36.d1d21b53.js"],"739de255":["/739de255.1919fabb.js"],"77cece35":["/77cece35.42218ff3.js"],"79eb7525":["/79eb7525.e12907e3.js"],"7ad840f7":["/7ad840f7.6adb7a86.js"],"7ae53aed":["/7ae53aed.05d9f03e.js"],"7c67e537":["/7c67e537.859d30d0.js"],"7e32b34a":["/7e32b34a.c6e9ac10.js"],"7f8cf1bb":["/7f8cf1bb.a3525cec.js"],"803ad07e":["/803ad07e.de2e2923.js"],"860d2d89":["/860d2d89.15b161a4.js"],"8630db20":["/8630db20.38411c22.js"],"89c229cb":["/89c229cb.85b540a6.js"],"8ab3e2bc":["/8ab3e2bc.56fba534.js"],"8b1e26b7":["/8b1e26b7.b2f58b09.js"],"8b421419":["/8b421419.42c2cdd3.js"],"8c66648a":["/8c66648a.6a0cb0de.js"],"8eeef984":["/8eeef984.3a30ffe2.js"],"8fc008d0":["/8fc008d0.3eee6ffd.js"],"9257730f":["/9257730f.0010ca99.js"],"98ad4111":["/98ad4111.05e66500.js"],"9c9e4252":["/9c9e4252.d5d18541.js"],"9d0acca4":["/9d0acca4.3cdfc540.js"],"a4091ed7":["/a4091ed7.637c5052.js"],"a6aa9e1f":["/a6aa9e1f.2e17cb78.css","/a6aa9e1f.950e42cf.js"],"a7417558":["/a7417558.47d3d5a2.js"],"a93b7ee7":["/a93b7ee7.635f754b.js"],"ac0e4e3e":["/ac0e4e3e.cd45870b.js"],"aebd8849":["/aebd8849.724c0519.js"],"b0a21785":["/b0a21785.2a6ebfe7.js"],"b21b6cc1":["/b21b6cc1.33b6b4b1.js"],"b79120f1":["/b79120f1.307e6087.js"],"b7ed1c8a":["/b7ed1c8a.8d1aa954.js"],"b881c32b":["/b881c32b.9d71e28e.js"],"b972d07e":["/b972d07e.c2ffba5f.js"],"bf73fad3":["/bf73fad3.8e487614.js"],"c05e4d5a":["/c05e4d5a.8ddb7f9d.js"],"c600d39c":["/c600d39c.835a4779.css","/c600d39c.55ece727.js"],"c857f1ae":["/c857f1ae.0829d603.js"],"cc4d8e68":["/cc4d8e68.d25f8885.js"],"ccc49370":["/ccc49370.7315363f.css","/ccc49370.84db238d.js"],"ce2bb144":["/ce2bb144.0cc7ffc9.js"],"d4cfff5b":["/d4cfff5b.854e4b29.js"],"d9730cc9":["/d9730cc9.b536028f.js"],"da3509f9":["/da3509f9.19fe6d9d.js"],"df6a2c28":["/df6a2c28.99a33ca0.js"],"e1b4bf6c":["/e1b4bf6c.0257af5e.js"],"e3c9d670":["/e3c9d670.97a8b989.js"],"e9185b47":["/e9185b47.83a5f41d.js"],"eaff6cc8":["/eaff6cc8.19bc6772.js"],"ebcc0a6d":["/ebcc0a6d.a97ad533.js"],"ece76bd1":["/ece76bd1.2a3f9b84.css","/ece76bd1.77df9a69.js"],"ef2910f4":["/ef2910f4.29fc556a.js"],"f28b30f3":["/f28b30f3.89af1639.js"],"f3f41dbe":["/f3f41dbe.f034122f.js"],"f6dc5573":["/f6dc5573.e1416861.js"],"fd4714f6":["/fd4714f6.45adc3c8.js"],"fe3eafb5":["/fe3eafb5.d76126a8.js"]};/*]]>*/</script>
 
-              coll[i].addEventListener('click', function() {
-                var arrow = this.childNodes[1];
-                arrow.classList.toggle('rotate');
-                var content = this.nextElementSibling;
-                content.classList.toggle('hide');
-              });
-            }
+<title data-react-helmet="true">Blog</title>
 
-            document.addEventListener('DOMContentLoaded', function() {
-              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
-              createToggler('#tocToggler', 'body', 'tocActive');
+<meta data-react-helmet="true" http-equiv="x-ua-compatible" content="ie=edge"/><meta data-react-helmet="true" property="og:title" content="Blog"/><meta data-react-helmet="true" name="description" content="Blog"/><meta data-react-helmet="true" property="og:description" content="Blog"/><meta data-react-helmet="true" property="og:image" content="https://t-regx.com/img/docusaurus.png"/><meta data-react-helmet="true" property="twitter:image" content="https://t-regx.com/img/docusaurus.png"/><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Blog"/><meta data-react-helmet="true" name="twitter:card" content="summary"/>
 
-              var headings = document.querySelector('.toc-headings');
-              headings && headings.addEventListener('click', function(event) {
-                var el = event.target;
-                while(el !== headings){
-                  if (el.tagName === 'A') {
-                    document.body.classList.remove('tocActive');
-                    break;
-                  } else{
-                    el = el.parentNode;
-                  }
-                }
-              }, false);
+<link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"/>
 
-              function createToggler(togglerSelector, targetSelector, className) {
-                var toggler = document.querySelector(togglerSelector);
-                var target = document.querySelector(targetSelector);
 
-                if (!toggler) {
-                  return;
-                }
+<link rel="stylesheet" type="text/css" href="/main.d1659d61.css" />
 
-                toggler.onclick = function(event) {
-                  event.preventDefault();
+<link rel="stylesheet" type="text/css" href="/1.7e4cf7a9.css" />
 
-                  target.classList.toggle(className);
-                };
-              }
-            });
-        </script></nav></div><div class="container mainContainer postContainer blogContainer"><div class="wrapper"><div class="posts"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/10/15/dont-forget-about-t-regx">Don&#x27;t forget about T-Regx</a></h1><p class="post-meta">October 15, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>Some of you might have noticed that not many new features have been added to 0.9.2 release candidate, since few weeks.
-But rest assured! :D Work on T-Regx hasn't slowed a bit! We've just put more effort on a more side-part of T-Regx.</p>
-<p>Thanks to the keen eye of T-Regx user, Andreas Leathley, it stroke us that phpDoc in public methods
+<link rel="stylesheet" type="text/css" href="/2.c20ced79.css" />
+
+<link rel="stylesheet" type="text/css" href="/a6aa9e1f.2e17cb78.css" />
+
+</head>
+<body >
+<div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a aria-current="page" class="navbar__brand active" href="/"><img class="navbar__logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><strong class="">T-Regx</strong></a><a class="navbar__item navbar__link" href="/docs/installation">Docs</a><a class="navbar__item navbar__link" href="/comparison">Compare</a><a class="navbar__item navbar__link" href="/help">Help</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog">Blog</a><a class="navbar__item navbar__link" target="_blank" rel="noopener noreferrer" href="https://github.com/T-Regx/T-Regx">GitHub</a></div><div class="navbar__items navbar__items--right"><div class="navbar__search"><span aria-label="expand searchbar" role="button" class="search-icon" tabindex="0"></span><input type="search" id="search_input_react" placeholder="Search" aria-label="Search" class="navbar__search-input search-bar"/></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a aria-current="page" class="navbar__brand active" href="/"><img class="navbar__logo" src="/img/t.regx.borderless.png" alt="T-Regx"/><strong>T-Regx</strong></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" href="/docs/installation">Docs</a></li><li class="menu__list-item"><a class="menu__link" href="/comparison">Compare</a></li><li class="menu__list-item"><a class="menu__link" href="/help">Help</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link navbar__link--active" href="/blog">Blog</a></li><li class="menu__list-item"><a class="menu__link" target="_blank" rel="noopener noreferrer" href="https://github.com/T-Regx/T-Regx">GitHub</a></li></ul></div></div></div></nav><div class="main-wrapper"><div class="container margin-vert--xl"><div class="row"><div class="col col--8 col--offset-2"><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2019/11/03/release-0.9.2">Release 0.9.2</a></h2><div class="margin-bottom--sm"><time dateTime="2019-11-03T00:00:00.000Z" class="blogPostDate_3tRe">November<!-- --> <!-- -->3<!-- -->, <!-- -->2019</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>😎 T-Regx is more than happy to announce its third alpha version!! As mentioned, despite the <code>alpha</code> suffix, it&#x27;s 100% suitable for production use. It doesn&#x27;t have any known bugs - it&#x27;s just missing a few time-consuming features.</p><p>What&#x27;s new in this release:</p><ul><li>Breaking changes<ul><li>Constructor <code>new Pattern()</code> is no longer a part of T-Regx API. Use <code>Pattern::of()</code>/<code>pattern()</code></li><li>Renamed <code>Match.parseInt()</code> to <code>Match.toInt()</code> (the same for <code>MatchGroup</code>)</li><li>Removed <code>pattern()-&gt;match()-&gt;test()</code>/<code>fails()</code>. From now on, use <code>pattern()-&gt;test()</code>/<code>fails()</code></li><li>Removed <code>is()</code>:<ul><li><code>is()-&gt;delimited()</code></li><li><code>is()-&gt;usabled()</code></li><li><code>is()-&gt;valid()</code> is changed to <code>valid()</code></li></ul></li></ul></li><li>Features<ul><li>Added <code>Match.group().replace()</code> 🔥</li><li>Added <code>pattern()-&gt;match()-&gt;fluent()</code> 🔥</li><li>Added <code>pattern()-&gt;match()-&gt;asInt()</code></li><li>Added <code>pattern()-&gt;match()-&gt;distinct()</code> (leaves only unique matches)</li><li>Added prepared pattern method <code>Pattern::inject()</code>/<code>Pattern::bind()</code> (see below)</li><li>In <code>pattern()-&gt;match()-&gt;groups()</code>:<ul><li>Added <code>groups()-&gt;forEach()</code>/<code>iterate()</code></li><li>Added <code>groups()-&gt;flatMap()</code></li><li>Added <code>groups()-&gt;map()</code></li><li>Added <code>group()-&gt;fluent()</code></li><li>Added <code>groups()-&gt;names()</code> (and <code>namedGroups()-&gt;names()</code>)</li><li>Added <code>groups()-&gt;count()</code> (and <code>namedGroups()-&gt;count()</code>)</li></ul></li><li>Added <code>pattern()-&gt;forArray()-&gt;strict()</code> which throws for invalid values, instead of filtering them out</li></ul></li><li>SafeRegex<ul><li>Added <code>preg::grep_keys()</code> 🔥, that works exactly like <code>preg::grep()</code>, but filters by keys (also accepts <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>PREG_GREP_INVERT</code></a>)</li><li>Methods <code>preg::grep()</code>, <code>preg::replace_callback()</code> and <code>preg::replace_callback_array()</code> are now protected from throwing Fatal Errors.</li></ul></li><li>Enhancements/updates<ul><li>Method <code>by()-&gt;group()-&gt;orElse()</code> now receives lazy-loaded <code>Match</code>, instead of a subject</li><li>Added <code>withReferences()</code> to <code>CompositePattern.chainedReplace()</code></li><li>Previously named <code>Pattern::inject()</code> is renamed to <code>Pattern::bind()</code></li><li>The <code>Pattern::bind()</code> (old <code>Pattern::inject()</code>) still accepts values as an associative array, but new <code>Pattern::inject()</code> receives values without regard for the keys.</li><li>Fixed passing invalid types to <code>forArray()</code>. Previously, caused fatal error due to internal implementation.</li></ul></li><li>Other<ul><li>Now <code>MalformedPatternException</code> is thrown, instead of <code>CompileSafeRegexException</code>, when using invalid PCRE syntax.</li><li>Returning <code>Match</code> from <code>replace()-&gt;callback()</code> (instead of <code>Match.text()</code> as <code>string</code>)</li><li>Match <code>+12</code> is no longer considered a valid integer for <code>isInt()</code>/<code>toInt()</code></li><li>Unnamed group will be represented as <code>null</code> in <code>Match.groupNames()</code>, instead of being simply ignored</li></ul></li><li>Maintenance<ul><li>PhpUnit throws different exceptions because of <a href="https://wiki.php.net/rfc/tostring_exceptions">PHP <code>__toString()</code> exception policy change</a>.</li></ul></li></ul></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Release 0.9.2" href="/blog/2019/11/03/release-0.9.2"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2019/10/15/dont-forget-about-t-regx">Don&#x27;t forget about T-Regx</a></h2><div class="margin-bottom--sm"><time dateTime="2019-10-15T00:00:00.000Z" class="blogPostDate_3tRe">October<!-- --> <!-- -->15<!-- -->, <!-- -->2019</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>Some of you might have noticed that not many new features have been added to 0.9.2 release candidate, since few weeks.
+But rest assured! :D Work on T-Regx hasn&#x27;t slowed a bit! We&#x27;ve just put more effort on a more side-part of T-Regx.</p><p>Thanks to the keen eye of T-Regx user, Andreas Leathley, it stroke us that phpDoc in public methods
 of <code>preg</code> class (so <code>preg::match()</code>, <code>preg::replace()</code>, etc.) were not only outdated, they were incorrect at times.
-Thanks Andreas! :)</p>
-<p>At first, we only wanted to correct the mistakes, but I quickly realized that mere phpDoc inherited from <code>preg_*()</code>
+Thanks Andreas! :)</p><p>At first, we only wanted to correct the mistakes, but I quickly realized that mere phpDoc inherited from <code>preg_*()</code>
 methods is not enough :/ That could be easily found on php.net, what T-Regx users could really benefit from is
-a really extensive, rich, long, detailed and robust documentation.</p>
-<p>That's why we've spent a little over a week to create an application that's capable of generating a complex and rich
-phpDoc for <code>preg</code> class (of course we'll use it for more classes in T-Regx). Main updates for the documentation will include:</p>
-<ul>
-<li>Robust description of every parameter of every <code>preg_*()</code></li>
-<li>Detailed description of every flag used (e.g. <a href="https://www.php.net/manual/en/pcre.constants.php"><code>PREG_OFFSET_CAPTURE</code></a>)</li>
-<li>Rich description of each method, it's relation, similarities and differences to other methods</li>
-</ul>
-<p>And it will be much easier to maintain, because every class will have a phpDoc that's not written, but generated.</p>
-<p>I'm pretty certain T-Regx is going to have a documentation you've never seen before :D</p>
-<p>Of course, there are also some minor changes:</p>
-<ul>
-<li>We've added <code>pattern()-&gt;match()-&gt;group()-&gt;fluent()</code></li>
-<li>Added callback for <code>pattern()-&gt;match()-&gt;group()-&gt;first()</code></li>
-<li>Updated detailed description in <a href="https://github.com/T-Regx/T-Regx/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a></li>
-</ul>
-<p>Keep looking forward to T-Regx 0.9.2! :)</p>
-</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/08/31/super-duper-stargazers">The best Stargazers&#x27; Revolutions</a></h1><p class="post-meta">August 31, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p><a href="/t-rix">I have imagined this moment for a long time. Is it real?</a> Could it be T-Regx got
-<strong>60</strong> stars ? :D</p>
-<p>But what's new.</p>
-<p>There is <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>preg_grep()</code></a> function for filtering an array by a pattern,
-unfortunately there's no flag or another method to filter it by keys. There is a T-Regx method
-<a href="/docs/filter.md#filter-by-keys"><code>forArray()-&gt;filterByKeys()</code></a>, but there was no such solution in SafeRegex.</p>
-<p>That's why we added <code>preg::grep_keys</code>, which works exactly like <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>preg_grep()</code></a> but filters an array by keys,
-instead of values. It's going to be release in 0.9.2.</p>
-<p><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#incoming-in-092">List of all changes incoming in 0.9.2 is available in ChangeLog.md</a>, with <code>fluent()</code>, <code>unique()</code>, in-place replacements and more.</p>
-</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/07/01/crazy-stargazers">&quot;The best Stargazers!&quot; Reloaded</a></h1><p class="post-meta">July 1, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>Holy guacamole! There were only 30 stars a few weeks ago and we have 40 already!? :D You guys gave us even more
-reason to release T-Regx 0.9.2 even sooner! Two new features are coming:</p>
-<ul>
-<li>In-group replacing 😲 You can now replace a single group inside your subject
-(not only in <code>replace()</code>, in any method with <a href="/docs/match-details"><code>Match</code></a> details)</li>
-<li>Additional prepared patterns method - <code>Pattern::bind()</code></li>
-</ul>
-<p>So keep an eye for 0.9.2 release.</p>
-</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/06/05/stargazers">The best Stargazers!</a></h1><p class="post-meta">June 5, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>The amount of stargazers just hit 30! We really appreciate your community recognition :) Thank you, for being out there.</p>
-</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2019/01/31/match-details-update">Match details update</a></h1><p class="post-meta">January 31, 2019</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>Most changes in T-Regx since the last Blog post were to <a href="/docs/match-details"><code>Match</code> details</a>. We
+a really extensive, rich, long, detailed and robust documentation. </p><p>That&#x27;s why we&#x27;ve spent a little over a week to create an application that&#x27;s capable of generating a complex and rich
+phpDoc for <code>preg</code> class (of course we&#x27;ll use it for more classes in T-Regx). Main updates for the documentation will include: </p><ul><li>Robust description of every parameter of every <code>preg_*()</code></li><li>Detailed description of every flag used (e.g. <a href="https://www.php.net/manual/en/pcre.constants.php"><code>PREG_OFFSET_CAPTURE</code></a>)</li><li>Rich description of each method, it&#x27;s relation, similarities and differences to other methods</li></ul><p>And it will be much easier to maintain, because every class will have a phpDoc that&#x27;s not written, but generated.</p><p>I&#x27;m pretty certain T-Regx is going to have a documentation you&#x27;ve never seen before :D</p><p>Of course, there are also some minor changes:</p><ul><li>We&#x27;ve added <code>pattern()-&gt;match()-&gt;group()-&gt;fluent()</code></li><li>Added callback for <code>pattern()-&gt;match()-&gt;group()-&gt;first()</code></li><li>Updated detailed description in <a href="https://github.com/T-Regx/T-Regx/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a></li></ul><p>Keep looking forward to T-Regx 0.9.2! :)</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Don&#x27;t forget about T-Regx" href="/blog/2019/10/15/dont-forget-about-t-regx"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2019/08/31/super-duper-stargazers">The best Stargazers&#x27; Revolutions</a></h2><div class="margin-bottom--sm"><time dateTime="2019-08-31T00:00:00.000Z" class="blogPostDate_3tRe">August<!-- --> <!-- -->31<!-- -->, <!-- -->2019</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p><a href="/t-rix">I have imagined this moment for a long time. Is it real?</a> Could it be T-Regx got
+<strong>60</strong> stars ? :D</p><p>But what&#x27;s new.</p><p>There is <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>preg_grep()</code></a> function for filtering an array by a pattern,
+unfortunately there&#x27;s no flag or another method to filter it by keys. There is a T-Regx method
+<a href="/docs/filter.md#filter-by-keys"><code>forArray()-&gt;filterByKeys()</code></a>, but there was no such solution in SafeRegex.</p><p>That&#x27;s why we added <code>preg::grep_keys</code>, which works exactly like <a href="https://www.php.net/manual/en/function.preg-grep.php"><code>preg_grep()</code></a> but filters an array by keys,
+instead of values. It&#x27;s going to be release in 0.9.2. </p><p><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#incoming-in-092">List of all changes incoming in 0.9.2 is available in ChangeLog.md</a>, with <code>fluent()</code>, <code>unique()</code>, in-place replacements and more.</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about The best Stargazers&#x27; Revolutions" href="/blog/2019/08/31/super-duper-stargazers"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2019/07/01/crazy-stargazers">&quot;The best Stargazers!&quot; Reloaded</a></h2><div class="margin-bottom--sm"><time dateTime="2019-07-01T00:00:00.000Z" class="blogPostDate_3tRe">July<!-- --> <!-- -->1<!-- -->, <!-- -->2019</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>Holy guacamole! There were only 30 stars a few weeks ago and we have 40 already!? :D You guys gave us even more
+reason to release T-Regx 0.9.2 even sooner! Two new features are coming:</p><ul><li>In-group replacing 😲 You can now replace a single group inside your subject
+(not only in <code>replace()</code>, in any method with <a href="/docs/match-details"><code>Match</code></a> details)</li><li>Additional prepared patterns method - <code>Pattern::bind()</code></li></ul><p>So keep an eye for 0.9.2 release.</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about &quot;The best Stargazers!&quot; Reloaded" href="/blog/2019/07/01/crazy-stargazers"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2019/06/05/stargazers">The best Stargazers!</a></h2><div class="margin-bottom--sm"><time dateTime="2019-06-05T00:00:00.000Z" class="blogPostDate_3tRe">June<!-- --> <!-- -->5<!-- -->, <!-- -->2019</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>The amount of stargazers just hit 30! We really appreciate your community recognition :) Thank you, for being out there.</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about The best Stargazers!" href="/blog/2019/06/05/stargazers"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2019/01/31/match-details-update">Match details update</a></h2><div class="margin-bottom--sm"><time dateTime="2019-01-31T00:00:00.000Z" class="blogPostDate_3tRe">January<!-- --> <!-- -->31<!-- -->, <!-- -->2019</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>Most changes in T-Regx since the last Blog post were to <a href="/docs/match-details"><code>Match</code> details</a>. We
 added <a href="/docs/match-details#user-data">user data</a> (<a href="/docs/match-details#user-data"><code>getUserData()</code>/<code>setUserData()</code></a>)
-which can be used in chained calls (e.g. <code>filter()-&gt;map()</code>).</p>
-<p>The second change is <a href="/docs/match-details#integers"><code>isInt()</code>/<code>parseInt()</code></a> which allow you to handle &quot;real&quot; integers safetly -
+which can be used in chained calls (e.g. <code>filter()-&gt;map()</code>).</p><p>The second change is <a href="/docs/match-details#integers"><code>isInt()</code>/<code>parseInt()</code></a> which allow you to handle &quot;real&quot; integers safetly -
 without the fear of &quot;PHP smart&quot; integers (e.g. PHP thinks that <code>&quot;1e3&quot;</code> is <code>1000</code>). T-Regx understands that robust applications
-can't allow numbers to be <code>10e4</code> - it should be treated as an invalid integer by default!</p>
-<p>And last, <code>Match.group(int|string)</code> is now validated (T-Regx was waiting a bit for this change!). We believe that using an
-invalid group name is a sign of a bug, so using <code>group(-1)</code> or <code>group('!@#')</code> now throws <code>\InvalidArgumentException</code>,
-as it's more suitable than assuming that <code>-1</code> is just an unmatched group.</p>
-</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/12/06/santa-clause-update">Santa Clause Day Update</a></h1><p class="post-meta">December 6, 2018</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p><img src="/img/t.regx.santa.png" class="blog-img t-regx-santa" alt=""></p>
-<p>So over 2 months have passed since the last blog entry - much have changed. It's all described in
-<a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md">ChangeLog.md</a> on github, so there's no reason for  rewriting
-it again.</p>
-<p>One big change is <a href="/docs/prepared-patterns"><code>Prepared Patterns</code></a> - which lets you handle user input or unsafe characters
-in your patterns. It's got a dedicated section in <a href="/docs/handling-user-input">Docs</a>, too.</p>
-<p>Except for that, there's a discussion section in <a href="/help">Help</a> - feel free to ask questions or propose features!</p>
-</span></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/09/24/welcome-t-regx">Welcome T-Regx</a></h1><p class="post-meta">September 24, 2018</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>The library changes its name! Now it's called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It's a combination of
-words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em>.</p>
-<p>Also, I've invested much more time into the development of <del>CleanRegex</del> T-Regx. Read on, for a detailed list of features.</p>
-</span></div><div class="read-more"><a class="button" href="/blog/2018/09/24/welcome-t-regx">Read More</a></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/09/01/groups">Capturing groups update</a></h1><p class="post-meta">September 1, 2018</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>One update about groups, not to cause confusion. <code>$match-&gt;groups()</code> treats indexes a bit different than <code>$match-&gt;group(int)</code>.
-Read on to learn more :)</p>
-</span></div><div class="read-more"><a class="button" href="/blog/2018/09/01/groups">Read More</a></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/03/03/php-5.3-support">Support for PHP 5.3</a></h1><p class="post-meta">March 3, 2018</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>Hello there! Another update, this time there's more to it - much has changed.</p>
-<p>Here's a quick list:</p>
-<ul>
-<li>ReadMe.md is now more throughout</li>
-<li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li>
-<li>The library can now be required using <a href="https://packagist.org/packages/rawr/t-regx" target="_blank">Composer</a></li>
-<li>CleanRegex supports <code>PHP 5.3</code></li>
-<li>Handling compile pattern exceptions and runtime pattern exceptions</li>
-<li>Passing callbacks with detailed object parameters (<code>Match</code> and <code>ReplaceMatch</code>).</li>
-<li>Add a facade <code>Pattern::of()</code></li>
-</ul>
-<p>In addition, I'd like to give a quick thanks to Bartek - my friend currently working at Thulium - for a nice suggestion :)</p>
-</span></div><div class="read-more"><a class="button" href="/blog/2018/03/03/php-5.3-support">Read More</a></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2017/12/30/safe-regex">What&#x27;s new, new, new! Part 2</a></h1><p class="post-meta">December 30, 2017</p><div class="authorBlock"><p class="post-authorName"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></p><div class="authorPhoto"><a target="_blank" rel="noreferrer noopener"><img src="https://graph.facebook.com/100001025937739/picture/?height=200&amp;width=200" alt="Daniel Wilkowski"/></a></div></div></header><article class="post-content"><div><span><p>I've separated the library into <code>CleanRegex</code> and <code>SafeRegex</code>. The <code>SafeRegex</code> is an exact copy of all <code>preg_*()</code> methods
-(like <code>preg_match()</code>, <code>preg_replace()</code>). They're used like this:</p>
-<ul>
-<li><code>preg_match()</code> -&gt; <code>preg::match()</code></li>
-<li><code>preg_replace()</code> -&gt; <code>preg::replace()</code></li>
-</ul>
-<p>I didn't want to use namespaces (like <code>\SafeRegex\preg_match</code>) because that would
-mean the programmers reading the code would have to check the imported namespaces <strong>every time</strong> they look at the code.
-With double colon <code>::</code> it's obvious. Read on, for more details.</p>
-</span></div><div class="read-more"><a class="button" href="/blog/2017/12/30/safe-regex">Read More</a></div></article></div><div class="docs-prevnext"><a class="docs-next" href="/blog/page2/">Next →</a></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/t.regx.png" alt="T-Regx" width="64" height="52"/></a><div><h5>Docs</h5><a href="/docs/installation">Installation</a><a href="/docs/introduction">Getting Started</a><a href="/docs/match">Documentation</a><a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/T-Regx/T-Regx" target="_blank">GitHub</a><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></div></section><section class="copyright">Copyright © 2017-2019 Daniel Wilkowski</section><section class="sitemap discussion-section"><div><div>
-<script>
-    (function () {
-       if (typeof window.disqus_shortname !== 'undefined') {
-            return;
-        }
-        window.disqus_shortname = 't-regx';
-        window.disqus_identifier = '46dff8e37535ddb3571510672d1af48683bad013';
-        window.disqus_title = 'Questions about T-Regx';
-        window.disqus_url = 'http://localhost:3000/help';
-        if (window.DISQUS === undefined) {
-            const script = document.createElement('script');
-            script.async = true;
-            script.src = 'https://t-regx.disqus.com/embed.js';
-            document.getElementsByTagName('head')[0].appendChild(script);
-        } else {
-            window.DISQUS.reset({reload: true});
-        }
-    })();
-</script></div><div id="disqus_thread"></div></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
-                document.addEventListener('keyup', function(e) {
-                  if (e.target !== document.body) {
-                    return;
-                  }
-                  // keyCode for '/' (slash)
-                  if (e.keyCode === 191) {
-                    const search = document.getElementById('search_input_react');
-                    search && search.focus();
-                  }
-                });
-              </script><script>
-              var search = docsearch({
-                
-                apiKey: '6d3eef6432e87213c7f031ee898b73a1',
-                indexName: 't-regx',
-                inputSelector: '#search_input_react',
-                algoliaOptions: {}
-              });
-            </script></body></html>
+can&#x27;t allow numbers to be <code>10e4</code> - it should be treated as an invalid integer by default!</p><p>And last, <code>Match.group(int|string)</code> is now validated (T-Regx was waiting a bit for this change!). We believe that using an
+invalid group name is a sign of a bug, so using <code>group(-1)</code> or <code>group(&#x27;!@#&#x27;)</code> now throws <code>\InvalidArgumentException</code>,
+as it&#x27;s more suitable than assuming that <code>-1</code> is just an unmatched group.</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Match details update" href="/blog/2019/01/31/match-details-update"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2018/12/06/santa-clause-update">Santa Clause Day Update</a></h2><div class="margin-bottom--sm"><time dateTime="2018-12-06T00:00:00.000Z" class="blogPostDate_3tRe">December<!-- --> <!-- -->6<!-- -->, <!-- -->2018</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><img src="/img/t.regx.santa.png" class="blog-img t-regx-santa" alt=""/><p>So over 2 months have passed since the last blog entry - much have changed. It&#x27;s all described in
+<a href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md">ChangeLog.md</a> on github, so there&#x27;s no reason for rewriting
+it again.</p><p>One big change is <a href="/docs/prepared-patterns"><code>Prepared Patterns</code></a> - which lets you handle user input or unsafe characters
+in your patterns. It&#x27;s got a dedicated section in <a href="/docs/handling-user-input">Docs</a>, too.</p><p>Except for that, there&#x27;s a discussion section in <a href="/help">Help</a> - feel free to ask questions or propose features!</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Santa Clause Day Update" href="/blog/2018/12/06/santa-clause-update"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2018/09/24/welcome-t-regx">Welcome T-Regx</a></h2><div class="margin-bottom--sm"><time dateTime="2018-09-24T00:00:00.000Z" class="blogPostDate_3tRe">September<!-- --> <!-- -->24<!-- -->, <!-- -->2018</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>The library changes its name! Now it&#x27;s called <a href="https://github.com/T-Regx/T-Regx">T-Regx</a>! It&#x27;s a combination of
+words <em>&quot;T-Rex&quot;</em> - the dinosaur - and <em>&quot;RegExp&quot;</em>.</p><p>Also, I&#x27;ve invested much more time into the development of <del>CleanRegex</del> T-Regx. Read on, for a detailed list of features.</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Welcome T-Regx" href="/blog/2018/09/24/welcome-t-regx"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2018/09/01/groups">Capturing groups update</a></h2><div class="margin-bottom--sm"><time dateTime="2018-09-01T00:00:00.000Z" class="blogPostDate_3tRe">September<!-- --> <!-- -->1<!-- -->, <!-- -->2018</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>One update about groups, not to cause confusion. <code>$match-&gt;groups()</code> treats indexes a bit different than <code>$match-&gt;group(int)</code>.
+Read on to learn more :)</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Capturing groups update" href="/blog/2018/09/01/groups"><strong>Read More</strong></a></div></footer></article><article class="margin-bottom--xl"><header><h2 class="margin-bottom--sm blogPostTitle_2RZH"><a href="/blog/2018/03/03/php-5.3-support">Support for PHP 5.3</a></h2><div class="margin-bottom--sm"><time dateTime="2018-03-03T00:00:00.000Z" class="blogPostDate_3tRe">March<!-- --> <!-- -->3<!-- -->, <!-- -->2018</time></div><div class="avatar margin-bottom--md"><div class="avatar__intro"><h4 class="avatar__name"><a target="_blank" rel="noreferrer noopener">Daniel Wilkowski</a></h4><small class="avatar__subtitle"></small></div></div></header><section class="markdown"><p>Hello there! Another update, this time there&#x27;s more to it - much has changed.</p><p>Here&#x27;s a quick list:</p><ul><li>ReadMe.md is now more throughout</li><li>CleanRegex runs on <a href="https://travis-ci.org/T-Regx/T-Regx">Travis</a> and <a href="https://coveralls.io/github/T-Regx/T-Regx?branch=master">Coveralls</a></li><li>The library can now be required using <a href="https://packagist.org/packages/rawr/t-regx" target="_blank">Composer</a></li><li>CleanRegex supports <code>PHP 5.3</code></li><li>Handling compile pattern exceptions and runtime pattern exceptions</li><li>Passing callbacks with detailed object parameters (<code>Match</code> and <code>ReplaceMatch</code>).</li><li>Add a facade <code>Pattern::of()</code></li></ul><p>In addition, I&#x27;d like to give a quick thanks to Bartek - my friend currently working at Thulium - for a nice suggestion :)</p></section><footer class="row margin-vert--lg"><div class="col text--right"><a aria-label="Read more about Support for PHP 5.3" href="/blog/2018/03/03/php-5.3-support"><strong>Read More</strong></a></div></footer></article><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/blog/page/2"><h4 class="pagination-nav__link--label">Older Entries »</h4></a></div></nav></div></div></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/installation">Installation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/introduction">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/match">Documentation</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/T-Regx/T-Regx/blob/master/ChangeLog.md#api">API Reference</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a aria-current="page" class="footer__link-item active" href="/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://github.com/T-Regx/T-Regx">GitHub</a></li><div><a class="github-button" href="https://github.com/T-Regx/T-Regx"
+                        title="See this project on GitHub"
+                        data-icon="octicon-star"
+                        data-show-count="true"
+                        data-count-href="/T-Regx/T-Regx/stargazers"
+                        data-count-aria-label="# stargazers on GitHub"
+                        aria-label="Star this project on GitHub">T-Regx</a></div></ul></div></div><div class="text--center"><div class="margin-bottom--sm"><img class="footer__logo" alt="T-Regx" src="/img/t.regx.png"/></div>Copyright © 2017-2019 Daniel Wilkowski</div></div></footer>
+</div>
+
+<script type="text/javascript" src="/runtime~main.aaa3a3a9.js"></script>
+
+<script type="text/javascript" src="/main.03d410a1.js"></script>
+
+<script type="text/javascript" src="/common.5dfbb4c3.js"></script>
+
+<script type="text/javascript" src="/1.eefd6e9c.js"></script>
+
+<script type="text/javascript" src="/2.d76c0977.js"></script>
+
+<script type="text/javascript" src="/a6aa9e1f.950e42cf.js"></script>
+
+<script type="text/javascript" src="/2ae560bb.1742fd64.js"></script>
+
+<script type="text/javascript" src="/f28b30f3.89af1639.js"></script>
+
+<script type="text/javascript" src="/04bf14f1.291901ec.js"></script>
+
+<script type="text/javascript" src="/8b1e26b7.b2f58b09.js"></script>
+
+<script type="text/javascript" src="/fe3eafb5.d76126a8.js"></script>
+
+<script type="text/javascript" src="/b881c32b.9d71e28e.js"></script>
+
+<script type="text/javascript" src="/6483ec16.cec2db8d.js"></script>
+
+<script type="text/javascript" src="/5d5fec46.bdfa5bd8.js"></script>
+
+<script type="text/javascript" src="/47548e79.006194b6.js"></script>
+
+<script type="text/javascript" src="/5e1501a2.e2246a3e.js"></script>
+
+<script type="text/javascript" src="/132daa94.8ba27b0b.js"></script>
+
+<script type="text/javascript" src="/9d0acca4.3cdfc540.js"></script>
+
+<script type="text/javascript" src="/ebcc0a6d.a97ad533.js"></script>
+
+<script type="text/javascript" src="/0a247942.db43c08f.js"></script>
+
+<script type="text/javascript" src="/aebd8849.724c0519.js"></script>
+
+<script type="text/javascript" src="/b21b6cc1.33b6b4b1.js"></script>
+
+<script type="text/javascript" src="/a7417558.47d3d5a2.js"></script>
+
+<script type="text/javascript" src="/8ab3e2bc.56fba534.js"></script>
+
+<script type="text/javascript" src="/2893b945.788aa792.js"></script>
+
+<script type="text/javascript" src="/7ae53aed.05d9f03e.js"></script>
+
+<script type="text/javascript" src="/1a9639fa.e29087f8.js"></script>
+
+</body>
+</html>
