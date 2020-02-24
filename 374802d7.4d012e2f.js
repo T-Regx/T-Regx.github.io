@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[39],{174:function(e){e.exports=JSON.parse('{"id":"safe-regex","title":"SafeRegex vs CleanRegex","description":"Here is some API","source":"@site/..\\\\docs\\\\safe-regex.md","permalink":"/docs/safe-regex","lastUpdatedAt":1539218115}')}}]);

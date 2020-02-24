@@ -1,0 +1,20 @@
+@import "layout";
+@import "links";
+@import "splash";
+@import "valentines";
+@import "code_tabs";
+@import "code-block-buttons";
+@import "navLinks";
+@import "old";
+@import "docsLinks";
+@import "docs";
+@import "comparison";
+@import "home";
+
+.discussion-tregx-grid img {
+  margin-top: 50px;
+}
+
+pre code.hljs {
+  padding: 1.25rem 0.75rem;
+}
