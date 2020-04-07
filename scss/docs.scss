@@ -1,0 +1,32 @@
+[class^='docMainContainer'] {
+  div + pre,
+  .output-block {
+    opacity: 0.9;
+    transition: opacity 0.2s;
+
+    &:before {
+      content: url("/img/fas/terminal.svg");
+      width: 20px;
+      height: 20px;
+      display: block;
+      opacity: 0.15;
+      margin: 0 0 3px 7px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .hash-link {
+    opacity: 0.3;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a:any-link > code {
+    color: var(--ifm-color-primary);
+  }
+}

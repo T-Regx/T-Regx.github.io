@@ -1,0 +1,25 @@
+.tabs {
+  border-top: none;
+
+  li.tab-item {
+    outline: none;
+    margin-right: 4px;
+  }
+}
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, .1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+blockquote {
+  background-color: #f8f8f8;
+
+  p {
+    code {
+      white-space: nowrap;
+    }
+  }
+}
