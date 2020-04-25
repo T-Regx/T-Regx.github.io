@@ -1,14 +1,15 @@
 .navbar-sidebar {
   .menu {
     overflow-y: hidden;
+
     .menu__list {
       li.menu__list-item {
         a.menu__link {
-          font-size: 4.5em;
+          font-size: 3.5em;
           line-height: 1.2em;
           padding: 0;
 
-          &:hover {
+          &:hover, &:active {
             background-color: var(--ifm-color-primary-lightest);
           }
         }
