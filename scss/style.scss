@@ -1,5 +1,6 @@
 @import "layout";
 @import "blogLinks";
+@import "carousel";
 @import "splash";
 @import "valentines";
 @import "codeTabs";
@@ -17,4 +18,12 @@
 
 pre code.hljs {
   padding: 1.25rem 0.75rem;
+}
+
+.darkBackground_src-pages- {
+  a,
+  code,
+  a code {
+    color: var(--ifm-color-primary-lightest)
+  }
 }
