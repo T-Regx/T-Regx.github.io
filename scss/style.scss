@@ -29,5 +29,9 @@ pre code.hljs {
 }
 
 .DocSearch--active {
+  /**
+   The viewport was changing size, due to the scrollbar disappearing
+   when search box was open.
+   */
   overflow-y: scroll !important;
 }
