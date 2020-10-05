@@ -7,17 +7,17 @@
 <link rel="search" type="application/opensearchdescription+xml" title="T-Regx" href="/opensearch.xml">
 <script src="https://buttons.github.io/buttons.js"></script><title data-react-helmet="true">Capturing groups | T-Regx</title><meta data-react-helmet="true" property="og:image" content="https://t-regx.com/img/docusaurus.png"><meta data-react-helmet="true" property="twitter:image" content="https://t-regx.com/img/docusaurus.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for T-Regx"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="Capturing groups | T-Regx"><meta data-react-helmet="true" name="description" content="When using [pattern()-&gt;match()] and [-&gt;replace-&gt;callback()], some methods receive a callback that accepts [Match]"><meta data-react-helmet="true" property="og:description" content="When using [pattern()-&gt;match()] and [-&gt;replace-&gt;callback()], some methods receive a callback that accepts [Match]"><meta data-react-helmet="true" property="og:url" content="https://t-regx.com/docs/match-groups"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="true"><link data-react-helmet="true" rel="canonical" href="https://t-regx.com/docs/match-groups"><link rel="stylesheet" href="/styles.04a9d672.css">
 <link rel="stylesheet" href="/main.20073192.css">
-<link rel="preload" href="/styles.79bfb7bb.js" as="script">
-<link rel="preload" href="/runtime~main.cea2fbb0.js" as="script">
-<link rel="preload" href="/main.b2080d17.js" as="script">
-<link rel="preload" href="/2.094ddda5.js" as="script">
-<link rel="preload" href="/3.18a2aa96.js" as="script">
-<link rel="preload" href="/4.e37badd1.js" as="script">
-<link rel="preload" href="/1be78505.c6f7a948.js" as="script">
-<link rel="preload" href="/110.a0316824.js" as="script">
+<link rel="preload" href="/styles.567646a5.js" as="script">
+<link rel="preload" href="/runtime~main.ac66fc83.js" as="script">
+<link rel="preload" href="/main.f1a461f4.js" as="script">
+<link rel="preload" href="/2.b0ff24d2.js" as="script">
+<link rel="preload" href="/3.a0a26c9a.js" as="script">
+<link rel="preload" href="/4.08b70850.js" as="script">
+<link rel="preload" href="/1be78505.d0787452.js" as="script">
+<link rel="preload" href="/109.d136aa93.js" as="script">
 <link rel="preload" href="/20ac7829.312fc8be.js" as="script">
-<link rel="preload" href="/17896441.4df17475.js" as="script">
-<link rel="preload" href="/8b421419.370605b7.js" as="script">
+<link rel="preload" href="/17896441.cdb5f6b3.js" as="script">
+<link rel="preload" href="/8b421419.cdf0f947.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -54,16 +54,16 @@ from a matched empty string, but to distinguish invalid and non-existent groups 
 have... nothing. There&#x27;s no way to verify it in vanilla-PHP.</p><hr><p>And T-Regx <strong>hates</strong> it. So we fixed it all.</p><hr><p>That&#x27;s why in T-Regx, <a href="/docs/match-details"><code>Match</code></a> details has 3 separate methods to deal with each of these cases separately. </p><p>Of course, the interface of <a href="/docs/match-details"><code>Match</code></a> is the same for matching, replacing and any other operation (unlike vanilla-PHP),
 so validation of groups in T-Regx works completely alike for <a href="/docs/match"><code>pattern()-&gt;match()</code></a>, <a href="/docs/replace"><code>pattern()-&gt;replace()</code></a> and any other
 method. <a href="/docs/match-details"><code>Match</code></a> always has the same interface and works exactly alike, no matter where it was used.</p><p>Here&#x27;s how they work:</p><table><thead><tr><th>Group</th><th><code>hasGroup()</code></th><th><code>matched()</code></th><th><code>text()</code></th></tr></thead><tbody><tr><td>Invalid group</td><td><code>InvalidArgument</code></td><td><code>InvalidArgument</code></td><td><code>InvalidArgument</code></td></tr><tr><td>Nonexistent group</td><td><code>false</code></td><td><code>NonexistentGroup</code></td><td><code>NonexistentGroup</code></td></tr><tr><td>Not matched group</td><td><code>true</code></td><td><code>false</code></td><td><code>GroupNotMatched</code></td></tr><tr><td>Matched group</td><td><code>true</code></td><td><code>true</code></td><td>Value of the group</td></tr></tbody></table><p>In short:</p><ul><li>You&#x27;re protected from using an invalid group (<code>2startingWithDigit</code> or negative <code>-1</code>)</li><li>You&#x27;re protected from using a non-existent method (except with <code>hasGroup()</code>)</li><li>You&#x27;re protected from using a non-matched group (except with <code>hasGroup()</code> and with <code>matched()</code>)</li></ul><blockquote><ul><li><code>InvalidArgument</code> is PHP <a href="https://www.php.net/manual/en/class.invalidargumentexception.php" target="_blank" rel="noopener noreferrer"><code>\InvalidArgumentException</code></a></li><li><code>NonexistentGroup</code> is <code>NonexistentGroupException</code></li><li><code>GroupNotMatched</code> is <code>GroupNotMatchedException</code></li></ul></blockquote></div></article><div class="margin-vert--xl"><div class="row"><div class="col"></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-08-09T18:58:31.000Z" class="docLastUpdatedAt_217_">9.08.2020</time></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/match-details"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Match details</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/match-offsets"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Match offsets »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_3klQ"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link">Overview</a></li><li><a href="#group-details" class="table-of-contents__link">Group details</a><ul><li><a href="#offsets" class="table-of-contents__link">Offsets</a></li><li><a href="#optional-groups" class="table-of-contents__link">Optional groups</a></li><li><a href="#index-name-and-identifier" class="table-of-contents__link">Index, name and identifier</a></li></ul></li><li><a href="#optional-groups-1" class="table-of-contents__link">Optional Groups</a></li><li><a href="#missing-groups" class="table-of-contents__link">Missing Groups</a></li><li><a href="#composite-groups" class="table-of-contents__link">Composite groups</a><ul><li><a href="#group-names" class="table-of-contents__link">Group names</a></li><li><a href="#groups-count" class="table-of-contents__link">Groups count</a></li></ul></li><li><a href="#other-occurrences" class="table-of-contents__link">Other occurrences</a></li><li><a href="#groups-in-depth" class="table-of-contents__link">Groups In-Depth</a><ul><li><a href="#invalid-group-identifiers" class="table-of-contents__link">Invalid group identifiers</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/installation">Installation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/introduction-safe">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/match">Documentation</a></li><li class="footer__item"><a href="https://github.com/T-Regx/T-Regx/blob/develop/ChangeLog.md#t-regx-changelog" target="_blank" rel="noopener noreferrer" class="footer__link-item">API Reference</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/T-Regx/T-Regx" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li><li class="footer__item"><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></li><li class="footer__item"><a href="https://github.com/sponsors/Danon" target="_blank" rel="noopener noreferrer" class="footer__link-item">Sponsor</a></li></ul></div></div><div class="text--center"><div class="margin-bottom--sm"><img class="footer__logo" alt="T-Regx" src="/img/t.regx.png"></div><div>Copyright © 2017-2020 Daniel Wilkowski</div></div></div></footer></div>
-<script src="/styles.79bfb7bb.js"></script>
-<script src="/runtime~main.cea2fbb0.js"></script>
-<script src="/main.b2080d17.js"></script>
-<script src="/2.094ddda5.js"></script>
-<script src="/3.18a2aa96.js"></script>
-<script src="/4.e37badd1.js"></script>
-<script src="/1be78505.c6f7a948.js"></script>
-<script src="/110.a0316824.js"></script>
+<script src="/styles.567646a5.js"></script>
+<script src="/runtime~main.ac66fc83.js"></script>
+<script src="/main.f1a461f4.js"></script>
+<script src="/2.b0ff24d2.js"></script>
+<script src="/3.a0a26c9a.js"></script>
+<script src="/4.08b70850.js"></script>
+<script src="/1be78505.d0787452.js"></script>
+<script src="/109.d136aa93.js"></script>
 <script src="/20ac7829.312fc8be.js"></script>
-<script src="/17896441.4df17475.js"></script>
-<script src="/8b421419.370605b7.js"></script>
+<script src="/17896441.cdb5f6b3.js"></script>
+<script src="/8b421419.cdf0f947.js"></script>
 </body>
 </html>
