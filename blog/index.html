@@ -7,25 +7,25 @@
 <link rel="search" type="application/opensearchdescription+xml" title="T-Regx" href="/opensearch.xml">
 <script src="https://buttons.github.io/buttons.js"></script><title data-react-helmet="true">Blog | T-Regx</title><meta data-react-helmet="true" property="og:title" content="Blog | T-Regx"><meta data-react-helmet="true" name="description" content="Blog"><meta data-react-helmet="true" property="og:description" content="Blog"><meta data-react-helmet="true" property="og:image" content="https://t-regx.com/img/docusaurus.png"><meta data-react-helmet="true" property="twitter:image" content="https://t-regx.com/img/docusaurus.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Blog | T-Regx"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="default"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="anonymous"><link rel="stylesheet" href="/styles.5f90aa75.css">
 <link rel="stylesheet" href="/main.be47c4ec.css">
-<link rel="preload" href="/styles.3a15bc8a.js" as="script">
-<link rel="preload" href="/runtime~main.6ce76672.js" as="script">
-<link rel="preload" href="/main.32c59a73.js" as="script">
+<link rel="preload" href="/styles.a3eb2080.js" as="script">
+<link rel="preload" href="/runtime~main.37476ba8.js" as="script">
+<link rel="preload" href="/main.2112aaf2.js" as="script">
 <link rel="preload" href="/2.27958615.js" as="script">
 <link rel="preload" href="/3.c9f4afd8.js" as="script">
-<link rel="preload" href="/4.bfce3d41.js" as="script">
-<link rel="preload" href="/a6aa9e1f.f8559019.js" as="script">
+<link rel="preload" href="/4.381c22a3.js" as="script">
+<link rel="preload" href="/a6aa9e1f.2a21db6d.js" as="script">
 <link rel="preload" href="/3068108f.73520a84.js" as="script">
-<link rel="preload" href="/6519a5ce.74decb01.js" as="script">
-<link rel="preload" href="/bd128f5a.e9dc83b0.js" as="script">
+<link rel="preload" href="/6519a5ce.d1ecd750.js" as="script">
+<link rel="preload" href="/bd128f5a.04d92c57.js" as="script">
 <link rel="preload" href="/266f6462.3d56b791.js" as="script">
-<link rel="preload" href="/d067e46a.a111aaa4.js" as="script">
-<link rel="preload" href="/eb888ed7.31a978db.js" as="script">
+<link rel="preload" href="/d067e46a.df0bd504.js" as="script">
+<link rel="preload" href="/eb888ed7.109017ba.js" as="script">
 <link rel="preload" href="/06689f96.63151d88.js" as="script">
 <link rel="preload" href="/1be618f2.babdf3a5.js" as="script">
 <link rel="preload" href="/302813b8.d0c01203.js" as="script">
 <link rel="preload" href="/32c983d8.4916078e.js" as="script">
-<link rel="preload" href="/a394b893.97e4a6d7.js" as="script">
-<link rel="preload" href="/b2b675dd.28a2a98c.js" as="script">
+<link rel="preload" href="/a394b893.a29ea535.js" as="script">
+<link rel="preload" href="/b2b675dd.2cd331a4.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -70,24 +70,24 @@ but will get an upgrade.</p><p>You see, <code>match()-&gt;first()</code> calls <
 because later <code>fluent()-&gt;map()</code> or <code>fluent()-&gt;filter()-&gt;first()</code> can be called, for example. And that also, sorta makes sense.
 But, unfortunately <code>match()-&gt;fluent()-&gt;first()</code> and <code>match()-&gt;asInt()-&gt;first()</code> also call <code>preg_match_all()</code>, and that&#x27;s a bit
 wasteful. </p><p>So now we&#x27;re introducing a change (similar to Java 8 Streams) that will call <code>preg_match()</code> for <code>fluent()-&gt;first()</code> and <code>asInt()-&gt;first()</code>.</p></section></article><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/blog/page/2"><h4 class="pagination-nav__label">Older Entries »</h4></a></div></nav></main></div></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/installation">Installation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/introduction-safe">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/match">Documentation</a></li><li class="footer__item"><a href="https://github.com/T-Regx/T-Regx/blob/develop/ChangeLog.md" target="_blank" rel="noopener noreferrer" class="footer__link-item">API Reference</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/T-Regx/T-Regx" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li><li class="footer__item"><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></li><li class="footer__item"><a href="https://github.com/sponsors/Danon" target="_blank" rel="noopener noreferrer" class="footer__link-item">Sponsor</a></li></ul></div></div><div class="text--center"><div class="margin-bottom--sm"><img class="footer__logo" alt="T-Regx" src="/img/t.regx.png"></div><div>Copyright © 2017-2021 Daniel Wilkowski</div></div></div></footer></div>
-<script src="/styles.3a15bc8a.js"></script>
-<script src="/runtime~main.6ce76672.js"></script>
-<script src="/main.32c59a73.js"></script>
+<script src="/styles.a3eb2080.js"></script>
+<script src="/runtime~main.37476ba8.js"></script>
+<script src="/main.2112aaf2.js"></script>
 <script src="/2.27958615.js"></script>
 <script src="/3.c9f4afd8.js"></script>
-<script src="/4.bfce3d41.js"></script>
-<script src="/a6aa9e1f.f8559019.js"></script>
+<script src="/4.381c22a3.js"></script>
+<script src="/a6aa9e1f.2a21db6d.js"></script>
 <script src="/3068108f.73520a84.js"></script>
-<script src="/6519a5ce.74decb01.js"></script>
-<script src="/bd128f5a.e9dc83b0.js"></script>
+<script src="/6519a5ce.d1ecd750.js"></script>
+<script src="/bd128f5a.04d92c57.js"></script>
 <script src="/266f6462.3d56b791.js"></script>
-<script src="/d067e46a.a111aaa4.js"></script>
-<script src="/eb888ed7.31a978db.js"></script>
+<script src="/d067e46a.df0bd504.js"></script>
+<script src="/eb888ed7.109017ba.js"></script>
 <script src="/06689f96.63151d88.js"></script>
 <script src="/1be618f2.babdf3a5.js"></script>
 <script src="/302813b8.d0c01203.js"></script>
 <script src="/32c983d8.4916078e.js"></script>
-<script src="/a394b893.97e4a6d7.js"></script>
-<script src="/b2b675dd.28a2a98c.js"></script>
+<script src="/a394b893.a29ea535.js"></script>
+<script src="/b2b675dd.2cd331a4.js"></script>
 </body>
 </html>
