@@ -4,9 +4,16 @@
         <title>T-Regx Blog</title>
         <link>https://t-regx.com/blog</link>
         <description>T-Regx Blog</description>
-        <lastBuildDate>Sun, 14 Feb 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 06 Mar 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Implicit all() in replace()]]></title>
+            <link>https://t-regx.com/blog/2021/03/06/release-0.10.2</link>
+            <guid>Implicit all() in replace()</guid>
+            <pubDate>Sat, 06 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Rawwrrrr!]]></description>
+        </item>
         <item>
             <title><![CDATA[Valentine's release]]></title>
             <link>https://t-regx.com/blog/2021/02/14/release-0.10.1</link>
