@@ -9,24 +9,24 @@
 <link rel="search" type="application/opensearchdescription+xml" title="T-Regx" href="/opensearch.xml">
 <script src="https://buttons.github.io/buttons.js"></script><title data-react-helmet="true">Blog | T-Regx</title><meta data-react-helmet="true" property="og:title" content="Blog | T-Regx"><meta data-react-helmet="true" name="description" content="Blog"><meta data-react-helmet="true" property="og:description" content="Blog"><meta data-react-helmet="true" property="og:image" content="https://t-regx.com/img/t.regx.png"><meta data-react-helmet="true" name="twitter:image" content="https://t-regx.com/img/t.regx.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Blog | T-Regx"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" name="docsearch:language" content="en"><meta data-react-helmet="true" name="docsearch:docusaurus_tag" content="default"><link data-react-helmet="true" rel="shortcut icon" href="/img/favicon.ico"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="anonymous"><link rel="stylesheet" href="/styles.a6184f2d.css">
 <link rel="stylesheet" href="/main.d69e9122.css">
-<link rel="preload" href="/styles.e5f932fb.js" as="script">
-<link rel="preload" href="/runtime~main.b8c954ce.js" as="script">
-<link rel="preload" href="/main.d4b448f8.js" as="script">
-<link rel="preload" href="/1.cfb82d98.js" as="script">
-<link rel="preload" href="/2.c2575d9b.js" as="script">
-<link rel="preload" href="/a6aa9e1f.8fe8c3c3.js" as="script">
-<link rel="preload" href="/3068108f.9c7c10d6.js" as="script">
-<link rel="preload" href="/623f9bae.9c267417.js" as="script">
-<link rel="preload" href="/79ca1226.e316821d.js" as="script">
-<link rel="preload" href="/90e28581.6e34754c.js" as="script">
-<link rel="preload" href="/e73b56f9.db188afe.js" as="script">
-<link rel="preload" href="/df99fee3.a1edc3f5.js" as="script">
-<link rel="preload" href="/6519a5ce.632e293c.js" as="script">
-<link rel="preload" href="/bd128f5a.7ee570ad.js" as="script">
-<link rel="preload" href="/266f6462.7a208994.js" as="script">
-<link rel="preload" href="/d067e46a.f1671876.js" as="script">
-<link rel="preload" href="/eb888ed7.35fe74dc.js" as="script">
-<link rel="preload" href="/b2b675dd.daca7285.js" as="script">
+<link rel="preload" href="/styles.a0786a67.js" as="script">
+<link rel="preload" href="/runtime~main.0a0e5745.js" as="script">
+<link rel="preload" href="/main.aa09b134.js" as="script">
+<link rel="preload" href="/1.8c7e116e.js" as="script">
+<link rel="preload" href="/2.d2ffd4d2.js" as="script">
+<link rel="preload" href="/a6aa9e1f.c39e3147.js" as="script">
+<link rel="preload" href="/3068108f.7b746278.js" as="script">
+<link rel="preload" href="/623f9bae.9f494561.js" as="script">
+<link rel="preload" href="/79ca1226.1ad0f4df.js" as="script">
+<link rel="preload" href="/90e28581.5f1fe87b.js" as="script">
+<link rel="preload" href="/e73b56f9.177c8644.js" as="script">
+<link rel="preload" href="/df99fee3.07f90f9d.js" as="script">
+<link rel="preload" href="/6519a5ce.0890dbb5.js" as="script">
+<link rel="preload" href="/bd128f5a.652f387f.js" as="script">
+<link rel="preload" href="/266f6462.713f718c.js" as="script">
+<link rel="preload" href="/d067e46a.a13d99f8.js" as="script">
+<link rel="preload" href="/eb888ed7.cca6d0c6.js" as="script">
+<link rel="preload" href="/b2b675dd.3a556925.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"light")}()</script><div id="__docusaurus">
@@ -77,23 +77,23 @@ comment in GitHub issues, we decided that perhaps it would be better not to remo
 but fix it.</p><p>In this case, fixing it would be disallowing such confusing constructs as alteration in prepared patterns.
 So we decided to bring back <code>Pattern::prepare()</code>, but remove alteration so the messy queries won&#x27;t appear
 in the source code.</p><p>Alteration is still available for <code>Pattern:inject()</code> and <code>Pattern::bind()</code>:</p><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-php codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:rgb(191, 199, 213);background-color:rgb(41, 45, 62)"><div class="token-line" style="color:rgb(191, 199, 213)"><span class="token plain">Pattern::inject(&#x27;@://@&#x27;, [[$http, $https], $domain])-&gt;test($link);</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div><div class="mdxCodeBlock_1zKU"><div class="codeBlockContent_actS"><div tabindex="0" class="prism-code language-php codeBlock_tuNs thin-scrollbar"><div class="codeBlockLines_3uvA" style="color:rgb(191, 199, 213);background-color:rgb(41, 45, 62)"><div class="token-line" style="color:rgb(191, 199, 213)"><span class="token plain">Pattern::bind(&#x27;@scheme://@domain&#x27;, [&#x27;scheme&#x27; =&gt; [$http, $https], &#x27;domain&#x27; =&gt; $domain])-&gt;test($link);</span></div></div></div><button type="button" aria-label="Copy code to clipboard" class="copyButton_2GIj">Copy</button></div></div></section></article><nav class="pagination-nav" aria-label="Blog list page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/blog/page/2"><div class="pagination-nav__label">Older Entries »</div></a></div></nav></main></div></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Docs</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/installation">Installation</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/introduction-safe">Getting Started</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/match">Documentation</a></li><li class="footer__item"><a href="https://github.com/T-Regx/T-Regx/blob/develop/ChangeLog.md" target="_blank" rel="noopener noreferrer" class="footer__link-item">API Reference</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">More</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li><li class="footer__item"><a href="https://github.com/T-Regx/T-Regx" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub</a></li><li class="footer__item"><a class="github-button" href="https://github.com/T-Regx/T-Regx" title="See this project on GitHub" data-icon="octicon-star" data-show-count="true" data-count-href="/T-Regx/T-Regx/stargazers" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">T-Regx</a></li><li class="footer__item"><a href="https://github.com/sponsors/Danon" target="_blank" rel="noopener noreferrer" class="footer__link-item">Sponsor</a></li></ul></div></div><div class="footer__bottom text--center"><div class="margin-bottom--sm"><img class="footer__logo" alt="T-Regx" src="/img/t.regx.png"></div><div class="footer__copyright">Copyright © 2017-2021 Daniel Wilkowski</div></div></div></footer></div>
-<script src="/styles.e5f932fb.js"></script>
-<script src="/runtime~main.b8c954ce.js"></script>
-<script src="/main.d4b448f8.js"></script>
-<script src="/1.cfb82d98.js"></script>
-<script src="/2.c2575d9b.js"></script>
-<script src="/a6aa9e1f.8fe8c3c3.js"></script>
-<script src="/3068108f.9c7c10d6.js"></script>
-<script src="/623f9bae.9c267417.js"></script>
-<script src="/79ca1226.e316821d.js"></script>
-<script src="/90e28581.6e34754c.js"></script>
-<script src="/e73b56f9.db188afe.js"></script>
-<script src="/df99fee3.a1edc3f5.js"></script>
-<script src="/6519a5ce.632e293c.js"></script>
-<script src="/bd128f5a.7ee570ad.js"></script>
-<script src="/266f6462.7a208994.js"></script>
-<script src="/d067e46a.f1671876.js"></script>
-<script src="/eb888ed7.35fe74dc.js"></script>
-<script src="/b2b675dd.daca7285.js"></script>
+<script src="/styles.a0786a67.js"></script>
+<script src="/runtime~main.0a0e5745.js"></script>
+<script src="/main.aa09b134.js"></script>
+<script src="/1.8c7e116e.js"></script>
+<script src="/2.d2ffd4d2.js"></script>
+<script src="/a6aa9e1f.c39e3147.js"></script>
+<script src="/3068108f.7b746278.js"></script>
+<script src="/623f9bae.9f494561.js"></script>
+<script src="/79ca1226.1ad0f4df.js"></script>
+<script src="/90e28581.5f1fe87b.js"></script>
+<script src="/e73b56f9.177c8644.js"></script>
+<script src="/df99fee3.07f90f9d.js"></script>
+<script src="/6519a5ce.0890dbb5.js"></script>
+<script src="/bd128f5a.652f387f.js"></script>
+<script src="/266f6462.713f718c.js"></script>
+<script src="/d067e46a.a13d99f8.js"></script>
+<script src="/eb888ed7.cca6d0c6.js"></script>
+<script src="/b2b675dd.3a556925.js"></script>
 </body>
 </html>
